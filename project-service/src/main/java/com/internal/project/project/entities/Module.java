@@ -1,6 +1,5 @@
 package com.internal.project.project.entities;
 
-
 import java.util.List;
 
 import javax.persistence.CascadeType;

@@ -18,15 +18,14 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
 
-import com.internal.project.project.controller.dto.ModuleData;
-import com.internal.project.project.controller.dto.mapper.ModuleDataMapper;
-import com.internal.project.project.controller.dto.mapper.ProjectDtoMapper;
 import com.internal.project.project.entities.Module;
 import com.internal.project.project.entities.Project;
 import com.internal.project.project.repositories.ModuleRepository;
 import com.internal.project.project.services.ModuleService;
 import com.internal.project.project.services.ProjectService;
-
+import com.internal.project.projectdto.ModuleData;
+import com.internal.project.projectdtomapper.ModuleDataMapper;
+import com.internal.project.projectdtomapper.ProjectDtoMapper;
 
 @CrossOrigin
 @RestController
@@ -53,7 +52,6 @@ public class ModuleController {
 	public ResponseEntity<Object> createModule(@Valid @RequestBody ModuleData moduleData) {
 		moduleDataMapper.saveModuleforMapper(moduleData);
 		return null;
-		
 
 	}
 
@@ -63,19 +61,21 @@ public class ModuleController {
 		logger.info("Module are listed ");
 		return new ResponseEntity<>(moduleDataMapper.getAllModuleForMapper(), HttpStatus.OK);
 	}
-	// Get All By Project Id  //
+
+	// Get All By Project Id //
 	@GetMapping(value = "/GetAllmodule/{projectid}")
 	public List<Module> getModuleByProjectId(@PathVariable String projectid) {
 		logger.info("Module are listed ");
 		return moduleService.getByprojectId(projectid);
 	}
+
 	// Get All Details in module Table
 	@GetMapping("/FindallMain")
 	public List<Module> FindallMain(Module module) {
-		List<Module> submodule  = (List<Module>) moduleService.getallDetails();
+		List<Module> submodule = (List<Module>) moduleService.getallDetails();
 		return submodule;
 	}
-	
+
 //	@GetMapping("/findProject")
 //	public  List<Project> findallmain(Project project) {
 //		 List<Project> moduless = (List<Project>) projectservice.findAll();
@@ -107,7 +107,7 @@ public class ModuleController {
 	public void deleteById(@PathVariable String moduleId) {
 		logger.info("Module are delete by id ");
 		moduleDataMapper.deleteById(moduleId);
-		
+
 	}
 
 	// Put Mapping For Module

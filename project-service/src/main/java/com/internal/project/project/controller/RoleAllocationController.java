@@ -1,9 +1,7 @@
 package com.internal.project.project.controller;
 
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -14,11 +12,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.internal.project.project.controller.dto.RoleAllocationDto;
-import com.internal.project.project.controller.dto.mapper.RoleAllocationDtoMapper;
-import com.internal.project.project.entities.RoleAllocation;
-
+import com.internal.project.projectdto.RoleAllocationDto;
+import com.internal.project.projectdtomapper.RoleAllocationDtoMapper;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -43,7 +38,7 @@ public class RoleAllocationController {
 	@PutMapping("updaterole/{empId}")
 	public ResponseEntity<Long> updateRoleAllocation(@PathVariable("empId") Long empId,
 			@RequestBody RoleAllocationDto roleAllocationDto) {
-		if (roleAllocationDtoMapper.UpdateRoleAllocation(empId,roleAllocationDto) != null)
+		if (roleAllocationDtoMapper.UpdateRoleAllocation(empId, roleAllocationDto) != null)
 			;
 		{
 			return new ResponseEntity<Long>(HttpStatus.OK);

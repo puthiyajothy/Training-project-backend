@@ -1,0 +1,311 @@
+"2020-04-27 22:34:07 - No active profile set, falling back to default profiles: default
+""2020-04-27 22:34:09 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-04-27 22:34:10 - Finished Spring Data repository scanning in 334ms. Found 8 JPA repository interfaces.
+""2020-04-27 22:34:10 - BeanFactory id=644bb3a7-1f94-3d1f-93f8-15607b9511d8
+""2020-04-27 22:34:11 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-04-27 22:34:12 - Tomcat initialized with port(s): 8085 (http)
+""2020-04-27 22:34:12 - Starting service [Tomcat]
+""2020-04-27 22:34:12 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-04-27 22:34:13 - Initializing Spring embedded WebApplicationContext
+""2020-04-27 22:34:13 - Root WebApplicationContext: initialization completed in 5670 ms
+""2020-04-27 22:34:14 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-04-27 22:34:14 - HHH000412: Hibernate Core {5.4.9.Final}
+""2020-04-27 22:34:15 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-04-27 22:34:15 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-04-27 22:34:17 - HikariPool-1 - Starting...
+""2020-04-27 22:34:21 - HikariPool-1 - Start completed.
+""2020-04-27 22:35:00 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-04-27 22:35:00 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:35:00 - Unable to start LiveReload server
+""2020-04-27 22:35:00 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:35:00 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:35:02 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.projectdtomapper.ResourceAllocationDtoMapper.logger
+""2020-04-27 22:35:02 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.services.impl.ResourceAllocationServiceImpl.logger
+""2020-04-27 22:35:02 - No URLs will be polled as dynamic configuration sources.
+""2020-04-27 22:35:02 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+""2020-04-27 22:35:02 - No URLs will be polled as dynamic configuration sources.
+""2020-04-27 22:35:02 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+""2020-04-27 22:35:02 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-04-27 22:35:03 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:35:05 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+""2020-04-27 22:35:05 - Setting initial instance status as: STARTING
+""2020-04-27 22:35:05 - Initializing Eureka in region us-east-1
+""2020-04-27 22:35:06 - Using JSON encoding codec LegacyJacksonJson
+""2020-04-27 22:35:06 - Using JSON decoding codec LegacyJacksonJson
+""2020-04-27 22:35:07 - Using XML encoding codec XStreamXml
+""2020-04-27 22:35:07 - Using XML decoding codec XStreamXml
+""2020-04-27 22:35:07 - Resolving eureka endpoints via configuration
+""2020-04-27 22:35:07 - Disable delta property : false
+""2020-04-27 22:35:07 - Single vip registry refresh property : null
+""2020-04-27 22:35:07 - Force full registry fetch : false
+""2020-04-27 22:35:07 - Application is null : false
+""2020-04-27 22:35:07 - Registered Applications size is zero : true
+""2020-04-27 22:35:07 - Application version is -1: true
+""2020-04-27 22:35:07 - Getting all instance registry info from the eureka server
+""2020-04-27 22:35:08 - The response status is 200
+""2020-04-27 22:35:08 - Starting heartbeat executor: renew interval is: 30
+""2020-04-27 22:35:08 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2020-04-27 22:35:08 - Discovery Client initialized at timestamp 1588007108226 with initial instances count: 1
+""2020-04-27 22:35:08 - Registering application PROJECT-SERVICE with eureka with status UP
+""2020-04-27 22:35:08 - Saw local status change event StatusChangeEvent [timestamp=1588007108247, current=UP, previous=STARTING]
+""2020-04-27 22:35:08 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:35:08 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:35:08 - Tomcat started on port(s): 8085 (http) with context path '/projectservice'
+""2020-04-27 22:35:08 - Updating port to 8085
+""2020-04-27 22:35:08 - Started ProjectServiceApplication in 64.241 seconds (JVM running for 67.439)
+""2020-04-27 22:35:32 - Unregistering application PROJECT-SERVICE with eureka with status DOWN
+""2020-04-27 22:35:32 - Saw local status change event StatusChangeEvent [timestamp=1588007132267, current=DOWN, previous=UP]
+""2020-04-27 22:35:32 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:35:32 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:35:32 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:35:32 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:35:32 - Shutting down DiscoveryClient ...
+""2020-04-27 22:35:35 - Unregistering ...
+""2020-04-27 22:35:35 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - deregister  status: 200
+""2020-04-27 22:35:35 - Completed shut down of DiscoveryClient
+""2020-04-27 22:35:35 - HikariPool-1 - Shutdown initiated...
+""2020-04-27 22:35:35 - HikariPool-1 - Shutdown completed.
+""2020-04-27 22:35:37 - No active profile set, falling back to default profiles: default
+""2020-04-27 22:35:39 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-04-27 22:35:39 - Finished Spring Data repository scanning in 40ms. Found 8 JPA repository interfaces.
+""2020-04-27 22:35:39 - BeanFactory id=644bb3a7-1f94-3d1f-93f8-15607b9511d8
+""2020-04-27 22:35:39 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-04-27 22:35:40 - The MBean registry cannot be disabled because it has already been initialised
+""2020-04-27 22:35:40 - Tomcat initialized with port(s): 8085 (http)
+""2020-04-27 22:35:40 - Starting service [Tomcat]
+""2020-04-27 22:35:40 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-04-27 22:35:40 - Initializing Spring embedded WebApplicationContext
+""2020-04-27 22:35:40 - Root WebApplicationContext: initialization completed in 2959 ms
+""2020-04-27 22:35:40 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-04-27 22:35:40 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-04-27 22:35:40 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-04-27 22:35:40 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:35:40 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:35:40 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:35:40 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.projectdtomapper.ResourceAllocationDtoMapper.logger
+""2020-04-27 22:35:40 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.services.impl.ResourceAllocationServiceImpl.logger
+""2020-04-27 22:35:41 - No URLs will be polled as dynamic configuration sources.
+""2020-04-27 22:35:41 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+""2020-04-27 22:35:41 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-04-27 22:35:41 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:35:41 - Unable to start LiveReload server
+""2020-04-27 22:35:42 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+""2020-04-27 22:35:42 - Setting initial instance status as: STARTING
+""2020-04-27 22:35:42 - Initializing Eureka in region us-east-1
+""2020-04-27 22:35:42 - Using JSON encoding codec LegacyJacksonJson
+""2020-04-27 22:35:42 - Using JSON decoding codec LegacyJacksonJson
+""2020-04-27 22:35:42 - Using XML encoding codec XStreamXml
+""2020-04-27 22:35:42 - Using XML decoding codec XStreamXml
+""2020-04-27 22:35:42 - Resolving eureka endpoints via configuration
+""2020-04-27 22:35:42 - Disable delta property : false
+""2020-04-27 22:35:42 - Single vip registry refresh property : null
+""2020-04-27 22:35:42 - Force full registry fetch : false
+""2020-04-27 22:35:42 - Application is null : false
+""2020-04-27 22:35:42 - Registered Applications size is zero : true
+""2020-04-27 22:35:42 - Application version is -1: true
+""2020-04-27 22:35:42 - Getting all instance registry info from the eureka server
+""2020-04-27 22:35:42 - The response status is 200
+""2020-04-27 22:35:42 - Starting heartbeat executor: renew interval is: 30
+""2020-04-27 22:35:42 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2020-04-27 22:35:42 - Discovery Client initialized at timestamp 1588007142945 with initial instances count: 2
+""2020-04-27 22:35:42 - Registering application PROJECT-SERVICE with eureka with status UP
+""2020-04-27 22:35:42 - Saw local status change event StatusChangeEvent [timestamp=1588007142952, current=UP, previous=STARTING]
+""2020-04-27 22:35:42 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:35:42 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:35:42 - Tomcat started on port(s): 8085 (http) with context path '/projectservice'
+""2020-04-27 22:35:42 - Updating port to 8085
+""2020-04-27 22:35:43 - Started ProjectServiceApplication in 6.799 seconds (JVM running for 101.799)
+""2020-04-27 22:35:43 - Condition evaluation unchanged
+""2020-04-27 22:35:48 - Unregistering application PROJECT-SERVICE with eureka with status DOWN
+""2020-04-27 22:35:48 - Saw local status change event StatusChangeEvent [timestamp=1588007148025, current=DOWN, previous=UP]
+""2020-04-27 22:35:48 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:35:48 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:35:48 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:35:48 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:35:48 - Shutting down DiscoveryClient ...
+""2020-04-27 22:35:51 - Unregistering ...
+""2020-04-27 22:35:51 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - deregister  status: 200
+""2020-04-27 22:35:51 - Completed shut down of DiscoveryClient
+""2020-04-27 22:35:52 - No active profile set, falling back to default profiles: default
+""2020-04-27 22:35:54 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-04-27 22:35:54 - Finished Spring Data repository scanning in 48ms. Found 8 JPA repository interfaces.
+""2020-04-27 22:35:54 - BeanFactory id=644bb3a7-1f94-3d1f-93f8-15607b9511d8
+""2020-04-27 22:35:54 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-04-27 22:35:54 - The MBean registry cannot be disabled because it has already been initialised
+""2020-04-27 22:35:55 - Tomcat initialized with port(s): 8085 (http)
+""2020-04-27 22:35:55 - Starting service [Tomcat]
+""2020-04-27 22:35:55 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-04-27 22:35:55 - Initializing Spring embedded WebApplicationContext
+""2020-04-27 22:35:55 - Root WebApplicationContext: initialization completed in 2789 ms
+""2020-04-27 22:35:55 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-04-27 22:35:55 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-04-27 22:35:55 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-04-27 22:35:55 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:35:55 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:35:55 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:35:55 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.projectdtomapper.ResourceAllocationDtoMapper.logger
+""2020-04-27 22:35:55 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.services.impl.ResourceAllocationServiceImpl.logger
+""2020-04-27 22:35:55 - No URLs will be polled as dynamic configuration sources.
+""2020-04-27 22:35:55 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+""2020-04-27 22:35:56 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-04-27 22:35:56 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:35:56 - Unable to start LiveReload server
+""2020-04-27 22:35:57 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+""2020-04-27 22:35:57 - Setting initial instance status as: STARTING
+""2020-04-27 22:35:57 - Initializing Eureka in region us-east-1
+""2020-04-27 22:35:57 - Using JSON encoding codec LegacyJacksonJson
+""2020-04-27 22:35:57 - Using JSON decoding codec LegacyJacksonJson
+""2020-04-27 22:35:57 - Using XML encoding codec XStreamXml
+""2020-04-27 22:35:57 - Using XML decoding codec XStreamXml
+""2020-04-27 22:35:57 - Resolving eureka endpoints via configuration
+""2020-04-27 22:35:57 - Disable delta property : false
+""2020-04-27 22:35:57 - Single vip registry refresh property : null
+""2020-04-27 22:35:57 - Force full registry fetch : false
+""2020-04-27 22:35:57 - Application is null : false
+""2020-04-27 22:35:57 - Registered Applications size is zero : true
+""2020-04-27 22:35:57 - Application version is -1: true
+""2020-04-27 22:35:57 - Getting all instance registry info from the eureka server
+""2020-04-27 22:35:57 - The response status is 200
+""2020-04-27 22:35:57 - Starting heartbeat executor: renew interval is: 30
+""2020-04-27 22:35:57 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2020-04-27 22:35:57 - Discovery Client initialized at timestamp 1588007157364 with initial instances count: 2
+""2020-04-27 22:35:57 - Registering application PROJECT-SERVICE with eureka with status UP
+""2020-04-27 22:35:57 - Saw local status change event StatusChangeEvent [timestamp=1588007157367, current=UP, previous=STARTING]
+""2020-04-27 22:35:57 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:35:57 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:35:57 - Tomcat started on port(s): 8085 (http) with context path '/projectservice'
+""2020-04-27 22:35:57 - Updating port to 8085
+""2020-04-27 22:35:57 - Started ProjectServiceApplication in 5.876 seconds (JVM running for 116.212)
+""2020-04-27 22:35:57 - Condition evaluation unchanged
+""2020-04-27 22:36:20 - Unregistering application PROJECT-SERVICE with eureka with status DOWN
+""2020-04-27 22:36:20 - Saw local status change event StatusChangeEvent [timestamp=1588007180241, current=DOWN, previous=UP]
+""2020-04-27 22:36:20 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:36:20 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:36:20 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:36:20 - Shutting down DiscoveryClient ...
+""2020-04-27 22:36:20 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:36:20 - Unregistering ...
+""2020-04-27 22:36:20 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - deregister  status: 200
+""2020-04-27 22:36:20 - Completed shut down of DiscoveryClient
+""2020-04-27 22:36:21 - No active profile set, falling back to default profiles: default
+""2020-04-27 22:36:22 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-04-27 22:36:22 - Finished Spring Data repository scanning in 35ms. Found 8 JPA repository interfaces.
+""2020-04-27 22:36:22 - BeanFactory id=644bb3a7-1f94-3d1f-93f8-15607b9511d8
+""2020-04-27 22:36:22 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-04-27 22:36:22 - The MBean registry cannot be disabled because it has already been initialised
+""2020-04-27 22:36:22 - Tomcat initialized with port(s): 8085 (http)
+""2020-04-27 22:36:22 - Starting service [Tomcat]
+""2020-04-27 22:36:22 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-04-27 22:36:22 - Initializing Spring embedded WebApplicationContext
+""2020-04-27 22:36:22 - Root WebApplicationContext: initialization completed in 640 ms
+""2020-04-27 22:36:22 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-04-27 22:36:22 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-04-27 22:36:22 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-04-27 22:36:22 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:36:22 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:36:22 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:36:23 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.projectdtomapper.ResourceAllocationDtoMapper.logger
+""2020-04-27 22:36:23 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.services.impl.ResourceAllocationServiceImpl.logger
+""2020-04-27 22:36:23 - No URLs will be polled as dynamic configuration sources.
+""2020-04-27 22:36:23 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+""2020-04-27 22:36:23 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-04-27 22:36:23 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:36:23 - Unable to start LiveReload server
+""2020-04-27 22:36:24 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+""2020-04-27 22:36:24 - Setting initial instance status as: STARTING
+""2020-04-27 22:36:24 - Initializing Eureka in region us-east-1
+""2020-04-27 22:36:24 - Using JSON encoding codec LegacyJacksonJson
+""2020-04-27 22:36:24 - Using JSON decoding codec LegacyJacksonJson
+""2020-04-27 22:36:24 - Using XML encoding codec XStreamXml
+""2020-04-27 22:36:24 - Using XML decoding codec XStreamXml
+""2020-04-27 22:36:24 - Resolving eureka endpoints via configuration
+""2020-04-27 22:36:24 - Disable delta property : false
+""2020-04-27 22:36:24 - Single vip registry refresh property : null
+""2020-04-27 22:36:24 - Force full registry fetch : false
+""2020-04-27 22:36:24 - Application is null : false
+""2020-04-27 22:36:24 - Registered Applications size is zero : true
+""2020-04-27 22:36:24 - Application version is -1: true
+""2020-04-27 22:36:24 - Getting all instance registry info from the eureka server
+""2020-04-27 22:36:24 - The response status is 200
+""2020-04-27 22:36:24 - Starting heartbeat executor: renew interval is: 30
+""2020-04-27 22:36:24 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2020-04-27 22:36:24 - Discovery Client initialized at timestamp 1588007184252 with initial instances count: 2
+""2020-04-27 22:36:24 - Registering application PROJECT-SERVICE with eureka with status UP
+""2020-04-27 22:36:24 - Saw local status change event StatusChangeEvent [timestamp=1588007184254, current=UP, previous=STARTING]
+""2020-04-27 22:36:24 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:36:24 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:36:24 - Tomcat started on port(s): 8085 (http) with context path '/projectservice'
+""2020-04-27 22:36:24 - Updating port to 8085
+""2020-04-27 22:36:24 - Started ProjectServiceApplication in 3.509 seconds (JVM running for 143.067)
+""2020-04-27 22:36:37 - Unregistering application PROJECT-SERVICE with eureka with status DOWN
+""2020-04-27 22:36:37 - Saw local status change event StatusChangeEvent [timestamp=1588007197087, current=DOWN, previous=UP]
+""2020-04-27 22:36:37 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:36:37 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:36:37 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:36:37 - Shutting down DiscoveryClient ...
+""2020-04-27 22:36:37 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:36:37 - Unregistering ...
+""2020-04-27 22:36:37 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - deregister  status: 200
+""2020-04-27 22:36:37 - Completed shut down of DiscoveryClient
+""2020-04-27 22:36:38 - No active profile set, falling back to default profiles: default
+""2020-04-27 22:36:38 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-04-27 22:36:38 - Finished Spring Data repository scanning in 31ms. Found 8 JPA repository interfaces.
+""2020-04-27 22:36:38 - BeanFactory id=644bb3a7-1f94-3d1f-93f8-15607b9511d8
+""2020-04-27 22:36:38 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-04-27 22:36:38 - The MBean registry cannot be disabled because it has already been initialised
+""2020-04-27 22:36:38 - Tomcat initialized with port(s): 8085 (http)
+""2020-04-27 22:36:38 - Starting service [Tomcat]
+""2020-04-27 22:36:38 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-04-27 22:36:38 - Initializing Spring embedded WebApplicationContext
+""2020-04-27 22:36:38 - Root WebApplicationContext: initialization completed in 618 ms
+""2020-04-27 22:36:39 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-04-27 22:36:39 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-04-27 22:36:39 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-04-27 22:36:39 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:36:39 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:36:39 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.converter.ResourceAllocationConverter.logger
+""2020-04-27 22:36:39 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.projectdtomapper.ResourceAllocationDtoMapper.logger
+""2020-04-27 22:36:39 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.internal.project.services.impl.ResourceAllocationServiceImpl.logger
+""2020-04-27 22:36:39 - No URLs will be polled as dynamic configuration sources.
+""2020-04-27 22:36:39 - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+""2020-04-27 22:36:39 - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+""2020-04-27 22:36:39 - Initializing ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:36:39 - Unable to start LiveReload server
+""2020-04-27 22:36:40 - You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+""2020-04-27 22:36:40 - Setting initial instance status as: STARTING
+""2020-04-27 22:36:40 - Initializing Eureka in region us-east-1
+""2020-04-27 22:36:40 - Using JSON encoding codec LegacyJacksonJson
+""2020-04-27 22:36:40 - Using JSON decoding codec LegacyJacksonJson
+""2020-04-27 22:36:40 - Using XML encoding codec XStreamXml
+""2020-04-27 22:36:40 - Using XML decoding codec XStreamXml
+""2020-04-27 22:36:40 - Resolving eureka endpoints via configuration
+""2020-04-27 22:36:40 - Disable delta property : false
+""2020-04-27 22:36:40 - Single vip registry refresh property : null
+""2020-04-27 22:36:40 - Force full registry fetch : false
+""2020-04-27 22:36:40 - Application is null : false
+""2020-04-27 22:36:40 - Registered Applications size is zero : true
+""2020-04-27 22:36:40 - Application version is -1: true
+""2020-04-27 22:36:40 - Getting all instance registry info from the eureka server
+""2020-04-27 22:36:40 - The response status is 200
+""2020-04-27 22:36:40 - Starting heartbeat executor: renew interval is: 30
+""2020-04-27 22:36:40 - InstanceInfoReplicator onDemand update allowed rate per min is 4
+""2020-04-27 22:36:40 - Discovery Client initialized at timestamp 1588007200564 with initial instances count: 2
+""2020-04-27 22:36:40 - Registering application PROJECT-SERVICE with eureka with status UP
+""2020-04-27 22:36:40 - Saw local status change event StatusChangeEvent [timestamp=1588007200566, current=UP, previous=STARTING]
+""2020-04-27 22:36:40 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:36:40 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:36:40 - Tomcat started on port(s): 8085 (http) with context path '/projectservice'
+""2020-04-27 22:36:40 - Updating port to 8085
+""2020-04-27 22:36:40 - Started ProjectServiceApplication in 3.177 seconds (JVM running for 159.374)
+""2020-04-27 22:36:40 - Condition evaluation unchanged
+""2020-04-27 22:36:46 - Unregistering application PROJECT-SERVICE with eureka with status DOWN
+""2020-04-27 22:36:46 - Saw local status change event StatusChangeEvent [timestamp=1588007206150, current=DOWN, previous=UP]
+""2020-04-27 22:36:46 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085: registering service...
+""2020-04-27 22:36:46 - Shutting down ExecutorService 'applicationTaskExecutor'
+""2020-04-27 22:36:46 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 22:36:46 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - registration status: 204
+""2020-04-27 22:36:46 - Shutting down DiscoveryClient ...
+""2020-04-27 22:36:49 - Unregistering ...
+""2020-04-27 22:36:49 - DiscoveryClient_PROJECT-SERVICE/DESKTOP-BVECKK9:project-service:8085 - deregister  status: 200
+""2020-04-27 22:36:49 - Completed shut down of DiscoveryClient
+"

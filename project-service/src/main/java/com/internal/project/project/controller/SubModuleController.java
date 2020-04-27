@@ -3,7 +3,6 @@ package com.internal.project.project.controller;
 import java.util.List;
 
 import javax.validation.Valid;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +16,11 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-
-import com.internal.project.project.controller.dto.SubModuleData;
-import com.internal.project.project.controller.dto.mapper.ModuleDataMapper;
-import com.internal.project.project.controller.dto.mapper.SubModuleDataMapper;
-import com.internal.project.project.entities.Module;
-import com.internal.project.project.entities.SubModule;
 import com.internal.project.project.repositories.SubModuleRepository;
 import com.internal.project.project.services.ModuleService;
+import com.internal.project.projectdto.SubModuleData;
+import com.internal.project.projectdtomapper.ModuleDataMapper;
+import com.internal.project.projectdtomapper.SubModuleDataMapper;
 
 @CrossOrigin
 @RestController
@@ -48,7 +44,7 @@ public class SubModuleController {
 	public ResponseEntity<Object> createSubModule(@Valid @RequestBody SubModuleData subModuleData) {
 		subModuleDataMapper.saveSubModuleforMapper(subModuleData);
 		return null;
-		
+
 	}
 
 	// Post Mapping For Create a Module
@@ -68,11 +64,10 @@ public class SubModuleController {
 
 	// Delete Mapping For SubModule
 	@DeleteMapping("deleteSubModuleById/{subModuleId}")
-	public void  deleteSubModuleById(@PathVariable String subModuleId) {
+	public void deleteSubModuleById(@PathVariable String subModuleId) {
 		logger.info("SubModule are delete by Id ");
-		  subModuleDataMapper.deleteSubModuleById(subModuleId);
+		subModuleDataMapper.deleteSubModuleById(subModuleId);
 	}
-
 
 	// Put Mapping For SubModule
 	@PutMapping("/updateSubModule/{submoduleId}")
@@ -92,23 +87,5 @@ public class SubModuleController {
 		logger.info("SubModule are get by name ");
 		return subModuleDataMapper.getBysubModuleNameForMapper(submoduleName);
 	}
-	//////////////////////////////////////////////////////////////
-//	//Abbrivation for module
-//		@PutMapping("/submodule/module/{moduleId}")
-//		public SubModule createNewSubModule(@PathVariable(name = "moduleId") String moduleId,
-//				@RequestBody SubModuleData subModuleData) {
-//			Module module = moduleService.getByModuleId(moduleId);
-//			List<SubModule> submodules=subModuleRepository.findSubModuleByModule(module);
-//			int a=submodules.size();
-//			String submoduleSerial=module.getModuleId() +"-"+subModuleData.getSubModuleId()+"-"+ a;
-//			
-//			SubModule submodule=new SubModule();
-//			submodule.setSubModuleId(submoduleSerial);
-////			submodule.setAbbre(subModuleData.getAbbre());
-//			submodule.setSubModuleName(subModuleData.getSubModuleName());
-////			submodule.setModule(module);
-//			submodule.setModule(module);
-//			return subModuleRepository.save(submodule);
-//		
-//		}
+	
 }

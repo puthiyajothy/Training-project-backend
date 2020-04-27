@@ -20,14 +20,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import com.internal.project.project.controller.dto.ResourceAllocationDto;
-import com.internal.project.project.controller.dto.mapper.ResourceAllocationDtoMapper;
 import com.internal.project.project.entities.Employee;
 import com.internal.project.project.entities.Project;
 import com.internal.project.project.entities.ResourceAllocation;
 import com.internal.project.project.entities.ResourceAllocationList;
 import com.internal.project.project.repositories.ResourceAllocationRepository;
 import com.internal.project.project.services.ResourceAllocationService;
+import com.internal.project.projectdto.ResourceAllocationDto;
+import com.internal.project.projectdtomapper.ResourceAllocationDtoMapper;
 
 @SuppressWarnings("unused")
 @RestController
@@ -163,14 +163,14 @@ public class ResourceAllocationController {
 				retrievedresource.add(resourceAllocationList);
 				System.out.println(employee.getEmployeeid());
 				return retrievedresource;
-				}
-		
-		}catch (Exception ex) {
-		
+			}
+
+		} catch (Exception ex) {
+
 			logger.error("Resource Controller :--> error" + ex.getMessage());
-	}
+		}
 		return null;
-}
+	}
 
 //	<----This APIs Is --- Delete --->
 	@DeleteMapping("/resource/{resourceId}")
@@ -180,11 +180,11 @@ public class ResourceAllocationController {
 			System.out.println(resourceId);
 			resourceAllocationDtoMapper.deleteResourceByresourceId(resourceId);
 			return new ResponseEntity<>("Deleted Successfully", HttpStatus.OK);
-		}catch (Exception ex ) {
+		} catch (Exception ex) {
 			logger.error("Resource Controller :--> error" + ex.getMessage());
 		}
 		return null;
-		
+
 	}
 
 }
