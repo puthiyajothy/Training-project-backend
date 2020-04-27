@@ -1,0 +1,58 @@
+2020-04-27 22:33:28.921  INFO 5948 --- [restartedMain] c.t.i.employee.EmployeeApplication       : No active profile set, falling back to default profiles: default
+2020-04-27 22:33:31.499  INFO 5948 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-04-27 22:33:31.645  INFO 5948 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 124ms. Found 2 JPA repository interfaces.
+2020-04-27 22:33:32.158  INFO 5948 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01a2024f-a178-3d0c-9754-6c7a0b58ff07
+2020-04-27 22:33:32.357  INFO 5948 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-04-27 22:33:33.956  INFO 5948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2020-04-27 22:33:34.015  INFO 5948 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-27 22:33:34.016  INFO 5948 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-04-27 22:33:34.402  INFO 5948 --- [restartedMain] o.a.c.c.C.[.[.[/employeeservice]         : Initializing Spring embedded WebApplicationContext
+2020-04-27 22:33:34.402  INFO 5948 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 5452 ms
+2020-04-27 22:33:35.414  INFO 5948 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-04-27 22:33:36.273  INFO 5948 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-04-27 22:33:37.027  INFO 5948 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-04-27 22:33:37.484  INFO 5948 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-04-27 22:33:39.376  INFO 5948 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-04-27 22:33:39.399  INFO 5948 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-04-27 22:33:40.751  WARN 5948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-04-27 22:33:40.751  INFO 5948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 22:33:40.758  WARN 5948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-04-27 22:33:40.759  INFO 5948 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-04-27 22:33:40.863  WARN 5948 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-04-27 22:33:41.201  INFO 5948 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-27 22:33:42.088  INFO 5948 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-27 22:33:44.290  WARN 5948 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-04-27 22:33:44.590  INFO 5948 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-04-27 22:33:44.741  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-04-27 22:33:45.787  INFO 5948 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-04-27 22:33:45.788  INFO 5948 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-04-27 22:33:46.243  INFO 5948 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-04-27 22:33:46.243  INFO 5948 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-04-27 22:33:46.870  INFO 5948 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-04-27 22:33:47.161  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-04-27 22:33:47.162  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-04-27 22:33:47.163  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-04-27 22:33:47.164  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-04-27 22:33:47.165  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-04-27 22:33:47.165  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-04-27 22:33:47.166  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-04-27 22:33:48.249  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-04-27 22:33:48.256  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-04-27 22:33:48.262  INFO 5948 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-04-27 22:33:48.306  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588007028271 with initial instances count: 0
+2020-04-27 22:33:48.316  INFO 5948 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2020-04-27 22:33:48.319  INFO 5948 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588007028319, current=UP, previous=STARTING]
+2020-04-27 22:33:48.334  INFO 5948 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084: registering service...
+2020-04-27 22:33:48.510  INFO 5948 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path '/employeeservice'
+2020-04-27 22:33:48.512  INFO 5948 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2020-04-27 22:33:48.679  INFO 5948 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084 - registration status: 204
+2020-04-27 22:33:48.888  INFO 5948 --- [restartedMain] c.t.i.employee.EmployeeApplication       : Started EmployeeApplication in 22.184 seconds (JVM running for 24.373)
+2020-04-27 22:34:18.258  INFO 5948 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-04-27 22:34:18.259  INFO 5948 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-04-27 22:34:18.260  INFO 5948 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-04-27 22:34:18.261  INFO 5948 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-04-27 22:34:18.261  INFO 5948 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-04-27 22:34:18.262  INFO 5948 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-04-27 22:34:18.263  INFO 5948 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-04-27 22:34:18.568  INFO 5948 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-04-27 22:38:47.314  INFO 5948 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
