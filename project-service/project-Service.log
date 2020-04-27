@@ -1,0 +1,130 @@
+"2020-04-27 16:22:16 - No active profile set, falling back to default profiles: default
+""2020-04-27 16:22:22 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-04-27 16:22:22 - Finished Spring Data repository scanning in 522ms. Found 8 JPA repository interfaces.
+""2020-04-27 16:22:24 - BeanFactory id=94c6225b-9829-3a47-9a73-c7765a0d646b
+""2020-04-27 16:22:24 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-04-27 16:22:26 - Tomcat initialized with port(s): 8085 (http)
+""2020-04-27 16:22:26 - Starting service [Tomcat]
+""2020-04-27 16:22:26 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-04-27 16:22:27 - Initializing Spring embedded WebApplicationContext
+""2020-04-27 16:22:27 - Root WebApplicationContext: initialization completed in 10513 ms
+""2020-04-27 16:22:28 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-04-27 16:22:29 - HHH000412: Hibernate Core {5.4.9.Final}
+""2020-04-27 16:22:30 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-04-27 16:22:31 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-04-27 16:22:34 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-04-27 16:22:34 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 16:22:44 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtoomapper.ResourceAllocationDtoMapper.logger
+""2020-04-27 16:22:44 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtoconverter.ResourceAllocationConverter.logger
+""2020-04-27 16:22:44 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtoconverter.ResourceAllocationConverter.logger
+""2020-04-27 16:22:44 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceAllocationController': Unsatisfied dependency expressed through field 'resourceAllocationDtoMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceAllocationDtoMapper': Unsatisfied dependency expressed through field 'resourceAllocationService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2020-04-27 16:22:44 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 16:22:44 - Stopping service [Tomcat]
+""2020-04-27 16:22:44 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-04-27 16:22:45 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field resourceAllocationService in com.training.internal.project.projectdtoomapper.ResourceAllocationDtoMapper required a bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' in your configuration.
+
+""2020-04-27 16:23:16 - No active profile set, falling back to default profiles: default
+""2020-04-27 16:23:16 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-04-27 16:23:16 - Finished Spring Data repository scanning in 100ms. Found 8 JPA repository interfaces.
+""2020-04-27 16:23:17 - BeanFactory id=94c6225b-9829-3a47-9a73-c7765a0d646b
+""2020-04-27 16:23:17 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-04-27 16:23:18 - Tomcat initialized with port(s): 8085 (http)
+""2020-04-27 16:23:18 - Starting service [Tomcat]
+""2020-04-27 16:23:18 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-04-27 16:23:18 - Initializing Spring embedded WebApplicationContext
+""2020-04-27 16:23:18 - Root WebApplicationContext: initialization completed in 2499 ms
+""2020-04-27 16:23:18 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-04-27 16:23:19 - HHH000412: Hibernate Core {5.4.9.Final}
+""2020-04-27 16:23:19 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-04-27 16:23:19 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-04-27 16:23:20 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-04-27 16:23:20 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 16:23:21 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtoomapper.ResourceAllocationDtoMapper.logger
+""2020-04-27 16:23:21 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtoconverter.ResourceAllocationConverter.logger
+""2020-04-27 16:23:21 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtoconverter.ResourceAllocationConverter.logger
+""2020-04-27 16:23:21 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceAllocationController': Unsatisfied dependency expressed through field 'resourceAllocationDtoMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceAllocationDtoMapper': Unsatisfied dependency expressed through field 'resourceAllocationService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2020-04-27 16:23:21 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 16:23:21 - Stopping service [Tomcat]
+""2020-04-27 16:23:21 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-04-27 16:23:21 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field resourceAllocationService in com.training.internal.project.projectdtoomapper.ResourceAllocationDtoMapper required a bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' in your configuration.
+
+""2020-04-27 16:25:43 - No active profile set, falling back to default profiles: default
+""2020-04-27 16:25:48 - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+""2020-04-27 16:25:48 - Finished Spring Data repository scanning in 424ms. Found 8 JPA repository interfaces.
+""2020-04-27 16:25:49 - BeanFactory id=94c6225b-9829-3a47-9a73-c7765a0d646b
+""2020-04-27 16:25:50 - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+""2020-04-27 16:25:52 - Tomcat initialized with port(s): 8085 (http)
+""2020-04-27 16:25:52 - Starting service [Tomcat]
+""2020-04-27 16:25:52 - Starting Servlet engine: [Apache Tomcat/9.0.29]
+""2020-04-27 16:25:52 - Initializing Spring embedded WebApplicationContext
+""2020-04-27 16:25:52 - Root WebApplicationContext: initialization completed in 9308 ms
+""2020-04-27 16:25:54 - HHH000204: Processing PersistenceUnitInfo [name: default]
+""2020-04-27 16:25:54 - HHH000412: Hibernate Core {5.4.9.Final}
+""2020-04-27 16:25:54 - HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+""2020-04-27 16:25:55 - HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+""2020-04-27 16:25:58 - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+""2020-04-27 16:25:58 - Initialized JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 16:26:00 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtomapper.ResourceAllocationDtoMapper.logger
+""2020-04-27 16:26:00 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtoconverter.ResourceAllocationConverter.logger
+""2020-04-27 16:26:00 - Autowired annotation is not supported on static fields: private static org.apache.logging.log4j.Logger com.training.internal.project.projectdtoconverter.ResourceAllocationConverter.logger
+""2020-04-27 16:26:00 - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceAllocationController': Unsatisfied dependency expressed through field 'resourceAllocationDtoMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'resourceAllocationDtoMapper': Unsatisfied dependency expressed through field 'resourceAllocationService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+""2020-04-27 16:26:00 - Closing JPA EntityManagerFactory for persistence unit 'default'
+""2020-04-27 16:26:00 - Stopping service [Tomcat]
+""2020-04-27 16:26:00 - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+""2020-04-27 16:26:01 - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field resourceAllocationService in com.training.internal.project.projectdtomapper.ResourceAllocationDtoMapper required a bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.training.internal.project.projectservices.ResourceAllocationService' in your configuration.
+
+"
