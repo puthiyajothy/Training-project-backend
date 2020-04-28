@@ -3,10 +3,10 @@ package com.internal.project.converter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internal.project.project.entities.Module;
-import com.internal.project.project.entities.Project;
-import com.internal.project.project.entities.SubModule;
-import com.internal.project.projectdto.ModuleData;
+import com.internal.project.dto.ModuleData;
+import com.internal.project.entities.Module;
+import com.internal.project.entities.Project;
+import com.internal.project.entities.SubModule;
 
 public class ModuleConverter {
 	
@@ -18,7 +18,7 @@ public class ModuleConverter {
 			moduleData.setModuleName(module.getModuleName());
 
 			new Module();
-			moduleData.setProjectid(module.getProject().getProjectId());
+//			moduleData.setProjectid(module.getProject().getProjectId());
 
 			//get sub module id
 //			Module module2=new Module();
@@ -43,8 +43,8 @@ public class ModuleConverter {
 //		module.setAbbr(moduleData.getAbbr());
 		
 		// get by project id
-		project.setProjectId(moduleData.getProjectid());
-		module.setProject(project);
+		project.setProjectId(moduleData.getProjectId());
+//		module.setProject(project);
 		
 		// get by sub module id
 //		subModule.setSubModuleId(moduleData.getSubModuleId());

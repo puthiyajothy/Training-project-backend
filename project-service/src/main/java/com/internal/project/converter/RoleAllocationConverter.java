@@ -3,8 +3,9 @@ package com.internal.project.converter;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.stereotype.Service;
-import com.internal.project.project.entities.RoleAllocation;
-import com.internal.project.projectdto.RoleAllocationDto;
+
+import com.internal.project.dto.RoleAllocationDto;
+import com.internal.project.entities.RoleAllocation;
 
 @Service
 public class RoleAllocationConverter {

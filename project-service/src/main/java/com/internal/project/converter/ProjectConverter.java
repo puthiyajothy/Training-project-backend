@@ -3,8 +3,8 @@ package com.internal.project.converter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internal.project.project.entities.Project;
-import com.internal.project.projectdto.ProjectDto;
+import com.internal.project.dto.ProjectDto;
+import com.internal.project.entities.Project;
 
 
 
@@ -17,7 +17,7 @@ public class ProjectConverter {
 		ProjectDto projectDto = new ProjectDto();
 
 		if (project != null) {
-			projectDto.setPid(project.getPid());
+			
 			projectDto.setProjectId(project.getProjectId());
 			projectDto.setProjectName(project.getProjectName());
 			projectDto.setType(project.getType());
@@ -35,7 +35,6 @@ public class ProjectConverter {
 	public static Project projectDtoToProject(ProjectDto projectDto) {
 		Project project = new Project();
 
-		project.setPid(projectDto.getPid());
 		project.setProjectId(projectDto.getProjectId());
 		project.setProjectName(projectDto.getProjectName());
 		project.setType(projectDto.getType());
@@ -56,7 +55,6 @@ public class ProjectConverter {
 				
 				ProjectDto projectDto = new ProjectDto();
 
-				projectDto.setPid(project.getPid());
 				projectDto.setProjectId(project.getProjectId());
 				projectDto.setProjectName(project.getProjectName());
 				projectDto.setType(project.getType());

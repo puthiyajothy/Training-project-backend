@@ -7,9 +7,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import com.internal.project.project.entities.Project;
-import com.internal.project.project.entities.ProjectPrivilegeConfig;
-import com.internal.project.projectdto.ProjectPrivilegeConfigDto;
+import com.internal.project.dto.ProjectPrivilegeConfigDto;
+import com.internal.project.entities.Project;
+import com.internal.project.entities.ProjectPrivilegeConfig;
 
 @Service
 public class ProjectPrivilegeConfigConverter {

@@ -8,9 +8,9 @@ import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.internal.project.project.entities.Project;
-import com.internal.project.project.entities.ResourceAllocation;
-import com.internal.project.projectdto.ResourceAllocationDto;
+import com.internal.project.dto.ResourceAllocationDto;
+import com.internal.project.entities.Project;
+import com.internal.project.entities.ResourceAllocation;
 
 @Service
 public class ResourceAllocationConverter {

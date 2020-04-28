@@ -5,10 +5,10 @@ import java.util.List;
 import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
-import com.internal.project.project.entities.Defect;
-import com.internal.project.project.entities.Module;
-import com.internal.project.project.entities.Project;
-import com.internal.project.projectdto.DefectDTO;
+import com.internal.project.dto.DefectDTO;
+import com.internal.project.entities.Defect;
+import com.internal.project.entities.Module;
+import com.internal.project.entities.Project;
 
 import org.apache.logging.log4j.LogManager;
 
@@ -47,7 +47,6 @@ public class DefectDTOConverter {
 				defectDTO.setProjectName(defect.getProject().getProjectName());
 				defectDTO.setModuleId(defect.getModule().getModuleId());
 				defectDTO.setModuleName(defect.getModule().getModuleName());
-				defectDTO.setPid(defect.getProject().getPid());
 				defectDTO.setMid(defect.getModule().getMid());
 				// defectData.setName(defect.getDefectConfig().getName());
 
@@ -89,7 +88,7 @@ public class DefectDTOConverter {
 			defectDTO.setPriority(defect.getPriority());
 			defectDTO.setType(defect.getType());
 			defectDTO.setStatus(defect.getStatus());
-			defectDTO.setPid(defect.getProject().getPid());
+			
 			defectDTO.setMid(defect.getModule().getMid());
 
 			// defectData.setName(defect.getDefectConfig().getName());
@@ -124,7 +123,7 @@ public class DefectDTOConverter {
 			defect.setStatus(defectDTO.getStatus());
 
 			Project projectobj = new Project();
-			projectobj.setPid(defectDTO.getPid());
+		
 			projectobj.setProjectId(defectDTO.getProjectId());
 			projectobj.setProjectName(defectDTO.getProjectName());
 			defect.setProject(projectobj);
