@@ -61,9 +61,9 @@ public class ProjectDtoMapper {
 		return ProjectConverter.projectToProjectDto(project);
 	}
 
-	public Project UpdateProject(Long projectId, ProjectDto projectDto) {
+	public Project UpdateProject(ProjectDto projectDto) {
 		Project project = ProjectConverter.projectDtoToProject(projectDto);
-		return projectimpl.updateProject(projectId, project);
+		return projectimpl.updateProject(project);
 	}
 
 	public ProjectDto delete(Long projectId) {

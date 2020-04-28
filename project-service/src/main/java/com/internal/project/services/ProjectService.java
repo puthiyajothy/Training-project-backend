@@ -20,7 +20,7 @@ public interface ProjectService {
 	public void delete(Long projectId);
 
 	// Method for Update Project Entity
-	public Project updateProject(Long projectId, Project project); 
+	public Project updateProject(Project project); 
 
 	// Method for GetProjectId in Project Entity
 	public Project getByprojectId(Long projectId);
@@ -39,5 +39,9 @@ public interface ProjectService {
 
 	// Method for GetProjectStatus in Project Entity
 	public List<Project> getBystatus(String status);
+	
+	//Count project
+	public Long TotalCount();
+
 
 }

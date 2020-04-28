@@ -56,12 +56,13 @@ public class ProjectServiceImpl implements ProjectService {
 	}
 
 	@Override
-	public Project updateProject(Long projectId, Project project) {
-		if (projectRepository.findAll() != null) {
-			project.setProjectId(projectId);
+	public Project updateProject(Project project) {
+		Long projectId = project.getProjectId();
+		boolean isExist = projectRepository.getByprojectId(projectId)!=null;
+		if (isExist) {
 			projectRepository.save(project);
 		}
-		return project;
+		return null;
 	}
 
 	@Override
@@ -72,5 +73,12 @@ public class ProjectServiceImpl implements ProjectService {
 	@Override
 	public List<Project> getBystartDate(String date) {
 		return projectRepository.getBystartDate(date);
+	}
+
+
+	@Override
+	public Long TotalCount() {
+		projectRepository.count();
+		return null;
 	}
 }

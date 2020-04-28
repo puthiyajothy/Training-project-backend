@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.internal.project.entities.Defect;
 import com.internal.project.repositories.DefectRepository;
+import com.internal.project.repositories.ProjectRepository;
 import com.internal.project.services.DefectService;
 
 import org.apache.logging.log4j.LogManager;
@@ -71,66 +72,6 @@ public class DefectServiceImpl implements DefectService {
 		logger.info("DefectService started -> getModuleById");
 		return defectRepository.getByModuleId(mid);
 	}
-
-	@Override
-	public boolean isDefectAlreadyExist(Long mid) {
-		logger.info("DefectService started -> isDefectAlreadyExist");
-		return defectRepository.existsById(mid);
-	}
-
-	@Override
-	public List<Defect> getDefectByDate(Date dateAndTime) {
-		logger.info("DefectService started -> getDefectByDate");
-		return defectRepository.getByDefectDate(dateAndTime);
-	}
-
-	@Override
-	public Defect updateDefectStatus(int statusId) {
-		return null;
-	}
-
-	@Override
-	public Defect updateReassignTo(String reassignTo) {
-
-		return null;
-	}
-
-	@Override
-	public Defect updateDefectComment(int commentId) {
-
-		return null;
-	}
-
-	@Override
-	public Defect updateDefectAttachment(int attachmentId) {
-
-		return null;
-	}
-
-	@Override
-	public List<Defect> getDefectByAvailableIn(String availableIn) {
-		logger.info("DefectService started -> getDefectByAvailableIn");
-		return defectRepository.getByAvailableIn(availableIn);
-	}
-
-	@Override
-	public List<Defect> getDefectByFoundIn(String foundIn) {
-		logger.info("DefectService started -> getDefectByFoundIn");
-		return defectRepository.getByFoundIn(foundIn);
-	}
-
-	@Override
-	public List<Defect> getDefectByFixedIn(String fixedIn) {
-		logger.info("DefectService started -> getDefectByfixedIn");
-		return defectRepository.getByFixedIn(fixedIn);
-	}
-
-	@Override
-	public List<Defect> getDefectByStatus(String status) {
-		logger.info("DefectService started -> getDefectByStatus");
-		return defectRepository.getByStatus(status);
-	}
-
 	@Override
 	public List<Defect> getDefectByPriority(String priority) {
 		logger.info("DefectService started -> getDefectByPriority");

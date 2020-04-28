@@ -51,16 +51,7 @@ public class ModuleServiceImpl implements ModuleService {
 	public boolean isModuleAlreadyExists(Long mid) {
 		return moduleRepository.existsById(mid);
 	}
-//
-//	@Override
-//	public List<Module> getBypid(Long pid) {
-//		return moduleRepository.getByPid(pid);
-//	}
 
-//	@Override
-//	public List<Object> getSubmodule(String subModuleId) {
-//		return moduleRepository.getSubmodule(subModuleId);
-//	}
 
 	@Override
 	public List<Module> getBymoduleName(String moduleName) {

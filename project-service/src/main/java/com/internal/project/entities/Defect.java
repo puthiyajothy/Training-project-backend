@@ -32,7 +32,7 @@ public class Defect {
 	private String status;
 
 	@ManyToOne
-	@JoinColumn(name = "pid", nullable = false)
+	@JoinColumn(name = "projectid", nullable = false)
 	private Project project;
 
 	@ManyToOne

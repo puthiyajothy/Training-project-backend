@@ -76,37 +76,6 @@ public class DefectDTOMapper {
 		
 	}
 	
-	
-	@SuppressWarnings("static-access")
-	public List<DefectDTO> getAllDefectByDate(Date dateAndTime){
-		logger.info("DefectData Mapper -> Defect List by dateandTimeId ");
-		List<Defect> defectDateandTime=defectService.getDefectByDate(dateAndTime);
-		return defectDTOConverter.defectEntityToDefectData(defectDateandTime);
-	}
-	
-	@SuppressWarnings("static-access")
-	public List<DefectDTO> getAllDefectByAvailableIn(String availableIn){
-		List<Defect> defectAvailableIn=defectService.getDefectByAvailableIn(availableIn);
-		return defectDTOConverter.defectEntityToDefectData(defectAvailableIn);
-		
-	}
-	@SuppressWarnings("static-access")
-	public List<DefectDTO> getAllDefectByFoundIn(String foundIn){
-		List<Defect> defectFoundIn=defectService.getDefectByFoundIn(foundIn);
-		return defectDTOConverter.defectEntityToDefectData(defectFoundIn);
-		
-	}
-	@SuppressWarnings("static-access")
-	public List<DefectDTO> getAllDefectByFixedIn(String fixedIn){
-		List<Defect> defectFixedIn=defectService.getDefectByFixedIn(fixedIn);
-		return defectDTOConverter.defectEntityToDefectData(defectFixedIn);
-		
-	}
-	@SuppressWarnings("static-access")
-	public List<DefectDTO> getAllDefectByStatus(String status) {
-		List<Defect> defectStatus=defectService.getDefectByStatus(status);
-		return defectDTOConverter.defectEntityToDefectData(defectStatus);
-	}
 	@SuppressWarnings("static-access")
 	public List<DefectDTO> getAllDefectByPriority(String priority) {
 		List<Defect> defectPriority=defectService.getDefectByPriority(priority);

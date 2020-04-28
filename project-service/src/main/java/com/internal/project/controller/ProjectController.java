@@ -20,6 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.internal.project.dto.ProjectDto;
 import com.internal.project.mapper.ProjectDtoMapper;
+import com.internal.project.projectservicesImpl.ProjectServiceImpl;
+import com.internal.project.repositories.ProjectRepository;
 
 
 @CrossOrigin(origins = "*", allowedHeaders = "*")
@@ -30,7 +32,13 @@ public class ProjectController {
 
 	@Autowired
 	public ProjectDtoMapper projectDtoMapper;
+	
+	@Autowired
+	public ProjectRepository projectRepo;
 
+	@Autowired
+	public ProjectServiceImpl projectserviceimpl;
+	
 	// Post Mapping For Create a Project
 	@PostMapping(value = "/createproject")
 	public ResponseEntity<Object> createProject(@Valid @RequestBody ProjectDto projectDto) {
@@ -49,8 +57,7 @@ public class ProjectController {
 	public ResponseEntity<List<ProjectDto>> listproject() {
 		try {
 			logger.info("Project are listed ");
-			projectDtoMapper.getAllProject();
-
+			return new ResponseEntity<>(projectDtoMapper.getAllProject(), HttpStatus.OK);
 		} catch (Exception e) {
 			logger.info("Project Controller ---> Error" + e.getMessage());
 		}
@@ -63,7 +70,7 @@ public class ProjectController {
 	public ResponseEntity<ProjectDto> getProjectById(@PathVariable Long projectId) {
 		try {
 			logger.info("Projects are get by id ");
-			projectDtoMapper.getByProjectId(projectId);
+			return  new ResponseEntity<>(projectDtoMapper.getByProjectId(projectId), HttpStatus.OK);
 
 		} catch (Exception e) {
 			logger.info("Project Controller ---> Error" + e.getMessage());
@@ -71,32 +78,34 @@ public class ProjectController {
 		return null;
 	}
 
-	// Delete Mapping For Project
-	@DeleteMapping("deleteById/{pid}")
-	public void delete(@PathVariable Long projectId) {
+	// Delete project
+	@DeleteMapping("deleteById/{projectid}")
+	public ResponseEntity<String> deleteproject(@PathVariable("projectid")  Long projectId) {
 		try {
 			logger.info("Already deleted ");
-			projectDtoMapper.delete(projectId);
+			projectRepo.deleteById(projectId);
+//			projectDtoMapper.delete(projectId);
+			return new ResponseEntity<>("Deleted Successfully", HttpStatus.OK);
 
 		} catch (Exception e) {
 			logger.info("Project Controller ---> Error" + e.getMessage());
 		}
+		return null;
 
 	}
 
 	// Put Mapping For Project
 	@PutMapping("/updateProject/{projectId}")
-	public ResponseEntity<String> updateProject(@Valid @PathVariable(name = "projectId") Long projectId,
-			@RequestBody ProjectDto projectDto) {
+	public ResponseEntity<String> updateProject(@RequestBody ProjectDto projectDto){
 		try {
 			logger.info("Projectcontroller -> updatedproject");
-			if (projectDtoMapper.UpdateProject(projectId, projectDto) != null);
+			if (projectDtoMapper.UpdateProject(projectDto) != null);
+			return new ResponseEntity<>("ok", HttpStatus.OK);
 
 		} catch (Exception e) {
 			logger.info("Project Controller ---> Error" + e.getMessage());
 		}
-		return new ResponseEntity<>("ok", HttpStatus.OK);
-
+		return null;
 	}
 
 	// Get Mapping For Project Name
@@ -168,16 +177,12 @@ public class ProjectController {
 		return null;
 
 	}
+	
+	@GetMapping("/Totalproject")
+	public ResponseEntity<Integer> totalprojct(){
+		projectserviceimpl.TotalCount();
+		return null;	
+	}
+	
 
-//	@DeleteMapping("/delete/{projectid}") // Delete Employee Using Employee ID
-//	public ResponseEntity<String> deleteproject(@PathVariable("projectid") String projectid) {
-//		try {
-//			logger.info("Project Controller :-> Delete Project");
-//			projectDtoMapper.deleteById(projectid);
-//			return new ResponseEntity<>("Deleted Successfully", HttpStatus.OK);
-//		} catch (Exception ex) {
-//			logger.error("Project Controller :-> Error" + ex.getMessage());
-//		}
-//		return null;
-//	}
 }

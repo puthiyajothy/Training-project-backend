@@ -31,4 +31,16 @@ public interface ProjectRepository  extends JpaRepository<Project, Long> {
 	// Find Project By Project_Status Method
 	@Query(value = "FROM Project WHERE status= :status")
 	List<Project> getBystatus(String status);
+	
+	public long count();
+	
+	@Query("SELECT open FROM status")
+	int openproject();
+	
+	@Query("SELECT closed FROM status")
+	int closedproject();
+	
+	@Query("SELECT start FROM status")
+	int startproject();
+	
 }
