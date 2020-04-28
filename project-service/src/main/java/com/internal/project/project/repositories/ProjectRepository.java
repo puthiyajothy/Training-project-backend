@@ -8,8 +8,9 @@ import org.springframework.data.repository.query.Param;
 
 import com.internal.project.project.entities.Project;
 
-public interface ProjectRepository  extends JpaRepository<Project, String> {
-	Project getByprojectId(String projectid);
+public interface ProjectRepository  extends JpaRepository<Project, Long> {
+	
+	Project getByprojectId(Long pid);
 
 	// Find Project By Project_Name Method
 	@Query(value = "FROM Project WHERE project_name= :projectName")

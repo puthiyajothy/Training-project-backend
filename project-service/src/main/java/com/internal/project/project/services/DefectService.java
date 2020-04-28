@@ -12,23 +12,23 @@ import com.internal.project.project.entities.Defect;
 public interface DefectService {
 
 	public Defect createDefect(Defect defect);   
-	public Defect getByDefectId(String defectId);
+	public Defect getByDefectId(Long defid);
 	public Defect updateDefect(Defect defect);
-	public Defect deleteDefect(String defectId);   
+	public Defect deleteDefect(Long defid);   
 	public List<Defect> getAllDefects(); 
 	
 	public Defect updateDefectStatus(int statusId); 
 	public Defect updateReassignTo(String reassignTo); 
 	public Defect updateDefectComment(int commentId); 
 	public Defect updateDefectAttachment(int attachmentId);
-	public List<Defect> getProjectById (String projectId); 
-	public List<Defect> getModuleById (String moduleId); 
+	public List<Defect> getProjectById (Long pid); 
+	public List<Defect> getModuleById (Long pid); 
 	public List<Defect> getDefectByAvailableIn (String availableIn);
 	public List<Defect> getDefectByFoundIn (String foundIn);
 	public List<Defect> getDefectByFixedIn (String fixedIn);
 	
 	public List<Defect> getDefectByDate (Date dateAndTime);
-	public boolean isDefectAlreadyExist(String defectId);
+	public boolean isDefectAlreadyExist(Long defid);
 	public List<Defect> getDefectByStatus(String status); 
 	public List<Defect> getDefectByPriority(String priority);
 	public List<Defect> getDefectBySeverity(String severity);
@@ -37,7 +37,6 @@ public interface DefectService {
 	public Long countDefect();
 	public double countDefectDensity();
 	
-	 //Hari
 	public Long getStatusNew(); 
 	public Long getStatusOpen();
 	public Long getStatusClose();

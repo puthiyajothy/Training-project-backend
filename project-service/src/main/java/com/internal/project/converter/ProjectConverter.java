@@ -17,7 +17,7 @@ public class ProjectConverter {
 		ProjectDto projectDto = new ProjectDto();
 
 		if (project != null) {
-
+			projectDto.setPid(project.getPid());
 			projectDto.setProjectId(project.getProjectId());
 			projectDto.setProjectName(project.getProjectName());
 			projectDto.setType(project.getType());
@@ -35,7 +35,7 @@ public class ProjectConverter {
 	public static Project projectDtoToProject(ProjectDto projectDto) {
 		Project project = new Project();
 
-
+		project.setPid(projectDto.getPid());
 		project.setProjectId(projectDto.getProjectId());
 		project.setProjectName(projectDto.getProjectName());
 		project.setType(projectDto.getType());
@@ -53,9 +53,10 @@ public class ProjectConverter {
 		if (projectList != null) {
 			List<ProjectDto> lProjectDto = new ArrayList<>();
 			for (Project project : projectList) {
+				
 				ProjectDto projectDto = new ProjectDto();
 
-
+				projectDto.setPid(project.getPid());
 				projectDto.setProjectId(project.getProjectId());
 				projectDto.setProjectName(project.getProjectName());
 				projectDto.setType(project.getType());

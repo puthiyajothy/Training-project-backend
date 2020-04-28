@@ -10,19 +10,19 @@ public interface ProjectService {
 	public Project createProject(Project project);
 
 	// Method for Exists Project Entity
-	public boolean isProjectAlreadyExists(String projectid);
+	public boolean isProjectAlreadyExists(Long pid);
 
 	// Method for Get all Project Entity
 	public List<Project> getallDetails();
 
 	// Method for Delete Project Entity
-	public void deleteById(String projectid);
+	public void delete(Long pid);
 
 	// Method for Update Project Entity
-	public Project updateProject(String projectid, Project project); 
+	public Project updateProject(Long pid, Project project); 
 
 	// Method for GetProjectId in Project Entity
-	public Project getByprojectId(String projectid);
+	public Project getByprojectId(Long pid);
 
 	// Method for GetProjectName in Project Entity
 	public List<Project> getByprojectName(String name);

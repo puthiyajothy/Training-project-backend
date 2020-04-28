@@ -9,7 +9,7 @@ public interface ModuleService {
 
 	public Module createModule(Module module);
 
-	public boolean isModuleAlreadyExists(String moduleId);
+	public boolean isModuleAlreadyExists(Long mid);
 
 	public List<Module> getallDetails();
 
@@ -17,16 +17,16 @@ public interface ModuleService {
 	
 	
 
-	public void deleteById(String moduleId);
+	public void deleteById(Long mid);
 
-	public Module updateModule(String moduleId, Module module);
+	public Module updateModule(Long mid, Module module);
 
-	Module getByModuleId(String moduleId);
+	Module getByModuleId(Long mid);
 
 	public List<Module> getBymoduleName(String moduleName);
 
 	// service for get project id
-	public List<Module> getByprojectId(String projectid);
+	public List<Module> getBypid(Long pid);
 
 //	List<Object> getSubmodule(String subModuleId);
 

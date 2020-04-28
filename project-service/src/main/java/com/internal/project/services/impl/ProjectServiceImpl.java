@@ -1,10 +1,8 @@
 package com.internal.project.services.impl;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.internal.project.project.entities.Project;
 import com.internal.project.project.entities.ProjectPrivilegeConfig;
 import com.internal.project.project.repositories.ProjectPrivilegeConfigRepository;
@@ -12,7 +10,7 @@ import com.internal.project.project.repositories.ProjectRepository;
 import com.internal.project.project.services.ProjectService;
 
 @Service
-public class ProjectServiceImpl implements ProjectService {
+public abstract class ProjectServiceImpl implements ProjectService {
 
 	@Autowired
 	private ProjectRepository projectRepository;
@@ -33,8 +31,8 @@ public class ProjectServiceImpl implements ProjectService {
 
 
 	@Override
-	public boolean isProjectAlreadyExists(String projectid) {
-		return projectRepository.existsById(projectid);
+	public boolean isProjectAlreadyExists(Long pid) {
+		return projectRepository.existsById(pid);
 	}
 
 	@Override
@@ -43,8 +41,8 @@ public class ProjectServiceImpl implements ProjectService {
 	}
 
 	@Override
-	public Project getByprojectId(String projectid) {
-		return projectRepository.getByprojectId(projectid);
+	public Project getByprojectId(Long pid) {
+		return projectRepository.getByprojectId(pid);
 	}
 
 	@Override
@@ -68,17 +66,17 @@ public class ProjectServiceImpl implements ProjectService {
 	}
 
 	@Override
-	public Project updateProject(String projectid, Project project) {
+	public Project updateProject(Long pid, Project project) {
 		if (projectRepository.findAll() != null) {
-			project.setProjectId(projectid);
+			project.setPid(pid);
 			projectRepository.save(project);
 		}
 		return project;
 	}
 
 	@Override
-	public void deleteById(String projectid) {
-		projectRepository.deleteById(projectid);
+	public void delete(Long pid) {
+		projectRepository.deleteById(pid);
 	}
 
 	@Override
@@ -86,10 +84,5 @@ public class ProjectServiceImpl implements ProjectService {
 		return projectRepository.getBystartDate(date);
 	}
 
-
-//	@Override
-//	public Project getByabbr(String abbr) {
-//		return projectRepository.getByabbr(abbr);
-//	}
 
 }

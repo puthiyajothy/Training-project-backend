@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProjectDto {
 	
+	private Long pid;
+	
 	private String projectId;
 
 	private String projectName;
@@ -21,7 +23,6 @@ public class ProjectDto {
 
 	private String status;
 
-//	private String configId;
 
 
 	public String getProjectId() {
@@ -78,6 +79,14 @@ public class ProjectDto {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public Long getPid() {
+		return pid;
+	}
+
+	public void setPid(Long pid) {
+		this.pid = pid;
 	}
 
 //	public String getConfigId() {

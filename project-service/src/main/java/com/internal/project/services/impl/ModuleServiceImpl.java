@@ -22,14 +22,14 @@ public class ModuleServiceImpl implements ModuleService {
 	}
 
 	@Override
-	public void deleteById(String moduleId) {
-		moduleRepository.deleteById(moduleId);
+	public void deleteById(Long mid) {
+		moduleRepository.deleteById(mid);
 
 	}
 
 	@Override
-	public Module getByModuleId(String moduleId) {
-		return moduleRepository.getByModuleId(moduleId);
+	public Module getByModuleId(Long mid) {
+		return moduleRepository.getByModuleId(mid);
 	}
 
 
@@ -39,22 +39,22 @@ public class ModuleServiceImpl implements ModuleService {
 	}
 
 	@Override
-	public Module updateModule(String moduleId, Module module) {
+	public Module updateModule(Long mid, Module module) {
 		if (moduleRepository.findAll() != null) {
-			module.setModuleId(moduleId);
+			module.setMid(mid);
 			moduleRepository.save(module);
 		}
 		return module;
 	}
 
 	@Override
-	public boolean isModuleAlreadyExists(String moduleId) {
-		return moduleRepository.existsById(moduleId);
+	public boolean isModuleAlreadyExists(Long mid) {
+		return moduleRepository.existsById(mid);
 	}
 
 	@Override
-	public List<Module> getByprojectId(String projectid) {
-		return moduleRepository.getByProjectId(projectid);
+	public List<Module> getBypid(Long pid) {
+		return moduleRepository.getByPid(pid);
 	}
 
 //	@Override

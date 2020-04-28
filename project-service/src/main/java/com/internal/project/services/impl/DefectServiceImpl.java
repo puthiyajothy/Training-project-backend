@@ -2,43 +2,40 @@ package com.internal.project.services.impl;
 
 import java.sql.Date;
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.internal.project.project.entities.Defect;
 import com.internal.project.project.repositories.DefectRepository;
 import com.internal.project.project.services.DefectService;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-
 @Service
 public class DefectServiceImpl implements DefectService {
 	@Autowired
 	private DefectRepository defectRepository;
-	
+
 	private static Logger logger = LogManager.getLogger(DefectRepository.class);
 
 	@Override
 	public Defect createDefect(Defect defect) {
-	    logger.info("DefectService started -> SaveAllDefects");
+		logger.info("DefectService started -> SaveAllDefects");
 		return defectRepository.save(defect);
 	}
 
 	@Override
-	public Defect getByDefectId(String defectId) {
+	public Defect getByDefectId(Long defid) {
 		logger.info("DefectService started -> GetAllDefectById");
-		return defectRepository.getByDefectId(defectId);
+		
+		return defectRepository.getByDefectId(defid);
 	}
-	
+
 	@Override
 	public Defect updateDefect(Defect defect) {
-	
+
 		logger.info("DefectService started -> updateDefect");
-		String defectId=defect.getDefectId();
+		Long defid = defect.getDefid();
 		logger.info("DefectService started -> getDefectId");
-		boolean isExist = defectRepository.getByDefectId(defectId)!= null;
+		boolean isExist = defectRepository.getByDefectId(defid) != null;
 		if (isExist) {
 			logger.info("DefectService started -> Updateed By DefectId");
 			return defectRepository.save(defect);
@@ -47,36 +44,36 @@ public class DefectServiceImpl implements DefectService {
 		}
 		return null;
 	}
-	
+
 	@Override
-	public Defect deleteDefect(String defectId) {
-	     logger.info("DefectService started -> DeleteDefectById");
-		 defectRepository.deleteById(defectId);
-		 return null;
+	public Defect deleteDefect(Long defid) {
+		logger.info("DefectService started -> DeleteDefectById");
+		defectRepository.deleteById(defid);
+		return null;
 	}
 
 	@Override
 	public List<Defect> getAllDefects() {
-	    logger.info("DefectService started -> ListAllDefects");
-		return defectRepository.findAll() ;
+		logger.info("DefectService started -> ListAllDefects");
+		return defectRepository.findAll();
 	}
 
 	@Override
-	public List<Defect> getProjectById(String projectId) {
+	public List<Defect> getProjectById(Long defid) {
 		logger.info("DefectService started -> getProjectById");
-		return defectRepository.getByProjectId(projectId);
+		return defectRepository.getByProjectId(defid);
 	}
 
 	@Override
-	public List<Defect> getModuleById(String moduleId) {
+	public List<Defect> getModuleById(Long mid) {
 		logger.info("DefectService started -> getModuleById");
-		return defectRepository.getByModuleId(moduleId);
+		return defectRepository.getByModuleId(mid);
 	}
 
 	@Override
-	public boolean isDefectAlreadyExist(String defectId) {
+	public boolean isDefectAlreadyExist(Long mid) {
 		logger.info("DefectService started -> isDefectAlreadyExist");
-		return defectRepository.existsById(defectId);
+		return defectRepository.existsById(mid);
 	}
 
 	@Override
@@ -84,7 +81,7 @@ public class DefectServiceImpl implements DefectService {
 		logger.info("DefectService started -> getDefectByDate");
 		return defectRepository.getByDefectDate(dateAndTime);
 	}
-	
+
 	@Override
 	public Defect updateDefectStatus(int statusId) {
 		return null;
@@ -98,13 +95,13 @@ public class DefectServiceImpl implements DefectService {
 
 	@Override
 	public Defect updateDefectComment(int commentId) {
-		
+
 		return null;
 	}
 
 	@Override
 	public Defect updateDefectAttachment(int attachmentId) {
-		
+
 		return null;
 	}
 
@@ -153,26 +150,26 @@ public class DefectServiceImpl implements DefectService {
 	@Override
 	public Long countDefect() {
 		Long totCount = defectRepository.count();
-		System.out.println("total count " +totCount);
+		System.out.println("total count " + totCount);
 		Long totRejCount = defectRepository.countByStatus("rejected");
-		System.out.println("rejected count " +totRejCount);
-		Long ratio =(( totCount-totRejCount)*100)/totCount;
-		System.out.println("ratio " +ratio);
+		System.out.println("rejected count " + totRejCount);
+		Long ratio = ((totCount - totRejCount) * 100) / totCount;
+		System.out.println("ratio " + ratio);
 		return ratio;
 	}
 
 	@Override
 	public double countDefectDensity() {
-		
-		double kloc= 5000;
-		double defectCount=defectRepository.count();
-		System.out.println("Total count :"+defectCount);
-		double defectDen=defectCount *(1000/kloc);
-		System.out.println("Ratio :"+defectDen);
+
+		double kloc = 5000;
+		double defectCount = defectRepository.count();
+		System.out.println("Total count :" + defectCount);
+		double defectDen = defectCount * (1000 / kloc);
+		System.out.println("Ratio :" + defectDen);
 		return defectDen;
 	}
 
-	//Hari matrix
+	// Hari matrix
 	@Override
 	public Long getStatusNew() {
 		Long totNew = defectRepository.countByStatus("New");
@@ -187,33 +184,32 @@ public class DefectServiceImpl implements DefectService {
 
 	@Override
 	public Long getStatusClose() {
-		Long totClose= defectRepository.countByStatus("Close");
+		Long totClose = defectRepository.countByStatus("Close");
 		return totClose;
 	}
 
 	@Override
 	public Long getStatusRejected() {
-		Long totRej= defectRepository.countByStatus("Rejected");
+		Long totRej = defectRepository.countByStatus("Rejected");
 		return totRej;
 	}
 
 	@Override
 	public Long getStatusDefered() {
-		Long totDefered= defectRepository.countByStatus("Defered");
+		Long totDefered = defectRepository.countByStatus("Defered");
 		return totDefered;
 	}
 
 	@Override
 	public Long getStatusReOpen() {
-		Long totReOpen= defectRepository.countByStatus("ReOpen");
+		Long totReOpen = defectRepository.countByStatus("ReOpen");
 		return totReOpen;
 	}
 
 	@Override
 	public Long getStatusFixed() {
-		Long totFixed= defectRepository.countByStatus("Fixed");
+		Long totFixed = defectRepository.countByStatus("Fixed");
 		return totFixed;
 	}
 
-	
 }

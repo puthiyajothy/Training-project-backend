@@ -38,40 +38,40 @@ public class DefectDTOMapper {
 		
 	}
 	
-	public DefectDTO deleteDefect(String defectId) {
+	public DefectDTO deleteDefect(Long defid) {
 		logger.info("DefectData Mapper -> Defect deleted");
-		defectService.deleteDefect(defectId);
+		defectService.deleteDefect(defid);
 		return null;
 		
 	}
 	
 	@SuppressWarnings("static-access")
-	public DefectDTO getByDefectId(String defectId) {
+	public DefectDTO getByDefectId(Long defid) {
 		logger.info("DefectData Mapper -> getByDefectId");
-		Defect defect= defectService.getByDefectId(defectId);
+		Defect defect= defectService.getByDefectId(defid);
 		return defectDTOConverter.defectEntityToDefectData(defect);
 	}
 	
 
 	@SuppressWarnings("static-access")
 	public Defect updateDefect(DefectDTO defectDTO) {
-		logger.info("DefectData Mapper -> Defect Details Updated ", defectDTO.getDefectId());
+		logger.info("DefectData Mapper -> Defect Details Updated ", defectDTO.getDefid());
 		return defectService.updateDefect(defectDTOConverter.defectDataToDefectEntity(defectDTO));
 	}
 	
 	
 	
 	@SuppressWarnings("static-access")
-	public List<DefectDTO> getAllDefectByProjectById(String projectId){
+	public List<DefectDTO> getAllDefectByProjectById(Long pid){
 		logger.info("DefectData Mapper -> Defect List by productId");
-		List<Defect> defectProject=defectService.getProjectById(projectId);
+		List<Defect> defectProject=defectService.getProjectById(pid);
 		return defectDTOConverter.defectEntityToDefectData(defectProject);
 	}
 	
 	@SuppressWarnings("static-access")
-	public List<DefectDTO> getAllDefectByModuleById(String moduleId){
+	public List<DefectDTO> getAllDefectByModuleById(Long  mid){
 		logger.info("DefectData Mapper -> Defect List by moduleId");
-		List<Defect> defectModule=defectService.getModuleById(moduleId);
+		List<Defect> defectModule=defectService.getModuleById(mid);
 		return defectDTOConverter.defectEntityToDefectData(defectModule);
 		
 	}

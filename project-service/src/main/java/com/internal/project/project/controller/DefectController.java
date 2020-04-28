@@ -44,84 +44,135 @@ public class DefectController {
 	private DefectService defectService;
 
 	@Autowired
-	private DefectRepository defectRepository;
-
-	@Autowired
 	private ProjectService projectService;
 
+	@Autowired
+	DefectRepository defectRepository;
+	
 	private static Logger logger = LogManager.getLogger(DefectDTOMapper.class);
+
+	@PostMapping("/saveDefect")
+	public ResponseEntity<String> saveDefect(@Valid @RequestBody DefectDTO defectDTO) {
+		try {
+			if (defectDTOMapper.createDefect(defectDTO) != null) {
+				logger.info("Defect Controller -> Defects Created Successful");
+				return new ResponseEntity<>("Defect added succesfully", HttpStatus.OK);
+			}
+		} catch (Exception e) {
+			logger.info("Controller -> getAllDefects FAILD" + e.getMessage());
+			return new ResponseEntity<>("SAVE FAILED!", HttpStatus.BAD_REQUEST);
+		}
+		return null;
+	}
 
 	@GetMapping(value = "/getAllDefects")
 	public List<DefectDTO> getAllDefects() {
-		logger.info("Controller -> getAllDefects Successfull");
-		return defectDTOMapper.getAllDefects();
+		try {
+			logger.info("Controller -> getAllDefects Successfull");
+			return defectDTOMapper.getAllDefects();
+		} catch (Exception e) {
+			logger.info("Controller -> getAllDefects Successfull" + e.getMessage());
+
+		}
+		return null;
+
 	}
 
-	@GetMapping(value = "/getDefectById/{defectId}")
-	public DefectDTO getByDefectId(@PathVariable(name = "defectId") String defectId) {
-		logger.info("Controller -> getByDefectId Successfull");
-		return defectDTOMapper.getByDefectId(defectId);
+	@GetMapping(value = "/getDefectById/{defid}")
+	public DefectDTO getByDefectId(@PathVariable(name = "defd") Long defid) {
+		try {
+			logger.info("Controller -> getByDefectId Successfull");
+			return defectDTOMapper.getByDefectId(defid);
+		} catch (Exception e) {
+			logger.info("Controller -> delete FAILD" + e.getMessage());
+		}
+		return null;
 
 	}
 
-	@GetMapping(value = "/getAllDefectsByProjectId/{projectId}")
-	public List<DefectDTO> getByProjectId(@PathVariable(name = "projectId") String projectId) {
-		logger.info("Controller -> getByProjectId Successfull");
-		return defectDTOMapper.getAllDefectByProjectById(projectId);
+	@GetMapping(value = "/getAllDefectsByProjectId/{pid}")
+	public List<DefectDTO> getByProjectId(@PathVariable(name = "pid") Long pid) {
+		try {
+			logger.info("Controller -> getByProjectId Successfull");
+			return defectDTOMapper.getAllDefectByProjectById(pid);
+		} catch (Exception e) {
+			logger.info("Controller -> Faild" + e.getMessage());
+		}
+		return null;
+
 	}
 
-	@GetMapping(value = "/getAllDefectsByModuleId/{moduleId}")
-	public List<DefectDTO> getByModuleId(@PathVariable(name = "moduleId") String moduleId) {
-		logger.info("Controller -> getBymoduleId Successfull");
-		return defectDTOMapper.getAllDefectByModuleById(moduleId);
+	@GetMapping(value = "/getAllDefectsByModuleId/{mid}")
+	public List<DefectDTO> getByModuleId(@PathVariable(name = "moduleId") Long mid) {
+		try {
+			logger.info("Controller -> getBymoduleId Successfull");
+			return defectDTOMapper.getAllDefectByModuleById(mid);
+
+		} catch (Exception e) {
+			logger.info("Controller -> Faild" + e.getMessage());
+		}
+		return null;
 	}
 
 	@GetMapping(value = "/getAllDefectsByDate/{dateAndTime}")
 	public List<DefectDTO> getByDate(@PathVariable(name = "dateAndTime") Date dateAndTime) {
-		logger.info("Controller -> getByDate Successfull");
-		return defectDTOMapper.getAllDefectByDate(dateAndTime);
-	}
-
-	@PostMapping("/saveDefect")
-	public ResponseEntity<String> saveDefect(@Valid @RequestBody DefectDTO defectDTO) {
-		if (defectDTOMapper.createDefect(defectDTO) != null) {
-			logger.info("Defect Controller -> Defects Created Successful");
-			return new ResponseEntity<>("Defect added succesfully", HttpStatus.OK);
+		try {
+			logger.info("Controller -> getByDate Successfull");
+			return defectDTOMapper.getAllDefectByDate(dateAndTime);
+		} catch (Exception e) {
+			logger.info("Controller -> Faild" + e.getMessage());
 		}
-		logger.info("Defect Controller -> Defects creation FAILED!!!");
-		return new ResponseEntity<>("SAVE FAILED!", HttpStatus.BAD_REQUEST);
+		return null;
+
 	}
 
 	@PutMapping("/updateDefect")
 	public ResponseEntity<String> updateDefect(@RequestBody DefectDTO defectDTO) {
-		logger.info("Defect Controller -> Defect Updated Successful");
-		if (defectDTOMapper.updateDefect(defectDTO) != null) {
-			return new ResponseEntity<>("Sucessfully Updated Defect Detail", HttpStatus.OK);
+		try {
+			logger.info("Defect Controller -> Defect Updated Successful");
+			if (defectDTOMapper.updateDefect(defectDTO) != null) {
+				return new ResponseEntity<>("Sucessfully Updated Defect Detail", HttpStatus.OK);
+			}
+		} catch (Exception e) {
+			logger.info("Defect Controller -> Defect Updated Failed!!!");
+			return new ResponseEntity<>("Update FAILED!!!", HttpStatus.BAD_REQUEST);
 		}
-		logger.info("Defect Controller -> Defect Updated Failed!!!");
-		return new ResponseEntity<>("Update FAILED!!!", HttpStatus.BAD_REQUEST);
+		return null;
+
 	}
 
-	@DeleteMapping("/deleteDefect/{defectId}")
-	public ResponseEntity<String> deleteCompany(@PathVariable(name = "defectId") String defectId) {
-		System.out.print(defectId);
-		if (defectDTOMapper.getByDefectId(defectId) != null) {
-			if (defectDTOMapper.deleteDefect(defectId) == null) {
-				logger.info("Defect Controller -> Defect Deleted Successful");
-				return new ResponseEntity<>("Defect Sucessfully deleted", HttpStatus.OK);
+	@DeleteMapping("/deleteDefect/{defid}")
+	public ResponseEntity<String> delete(@PathVariable(name = "defid") Long defid) {
+		try {
+			System.out.print(defid);
+			if (defectDTOMapper.getByDefectId(defid) != null) {
+				if (defectDTOMapper.deleteDefect(defid) == null) {
+					logger.info("Defect Controller -> Defect Deleted Successful");
+					return new ResponseEntity<>("Defect Sucessfully deleted", HttpStatus.OK);
+				}
+			} else {
+				logger.info("Defect Controller -> Defect Id Not Found");
+				return new ResponseEntity<>("Defect Id Not FOUND!!!", HttpStatus.BAD_REQUEST);
 			}
-		} else {
-			logger.info("Defect Controller -> Defect Id Not Found");
-			return new ResponseEntity<>("Defect Id Not FOUND!!!", HttpStatus.BAD_REQUEST);
+
+		} catch (Exception e) {
+			logger.info("Defect Controller -> Defect Deleted Failed!!!" + e.getMessage());
+			return new ResponseEntity<>("Delete FAILED!!!", HttpStatus.BAD_REQUEST);
 		}
-		logger.info("Defect Controller -> Defect Deleted Failed!!!");
-		return new ResponseEntity<>("Delete FAILED!!!", HttpStatus.BAD_REQUEST);
+		return null;
+
 	}
 
 	@GetMapping(value = "/getDefectsByStatus/{status}")
 	public List<DefectDTO> getByStatus(@PathVariable(name = "status") String status) {
-		logger.info("Controller -> getByDate Successfull");
-		return defectDTOMapper.getAllDefectByStatus(status);
+		try {
+			logger.info("Controller -> getByDate Successfull");
+			return defectDTOMapper.getAllDefectByStatus(status);
+		} catch (Exception e) {
+			logger.info("Failed!!!" + e.getMessage());
+		}
+		return null;
+
 	}
 
 	@GetMapping(value = "/getDefectsByPriority/{priority}")
@@ -178,23 +229,23 @@ public class DefectController {
 	}
 
 	// Create defect service
-	@PutMapping("/defect/module/{moduleId}")
-	public Defect createNewDefect(@PathVariable(name = "moduleId") String moduleId, @RequestBody DefectDTO defectDTO) {
+	@PutMapping("/defect/module/{mid}")
+	public Defect createNewDefect(@PathVariable(name = "mid") Long mid, @RequestBody DefectDTO defectDTO) {
 
-		Module module = moduleService.getByModuleId(moduleId);
+		Module module = moduleService.getByModuleId(mid);
 		List<Defect> defect = defectRepository.findDefectByModule(module);
 		int def = defect.size();
-		String defectSerial = moduleId + "-" + def;
+		String defectSerial = mid + "-" + def;
 
 		Defect defects = new Defect();
 
-		Project project = projectService.getByprojectId(defectDTO.getProjectId());
+		Project project = projectService.getByprojectId(defectDTO.getPid());
 
 		defects.setDefectId(defectSerial);
 
 		defects.setProject(project);
 		defects.setModule(module);
-		defects.setAbbre(defectDTO.getAbbre());
+//		defects.setAbbre(defectDTO.getAbbre());
 		defects.setDefectDescription(defectDTO.getDefectDescription());
 		defects.setStepsToRecreate(defectDTO.getStepsToRecreate());
 		defects.setAssignTo(defectDTO.getAssignTo());

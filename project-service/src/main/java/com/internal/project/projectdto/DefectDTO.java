@@ -3,11 +3,9 @@ package com.internal.project.projectdto;
 import java.sql.Date;
 
 public class DefectDTO {
-	
+	private Long defid;
 	private String defectId;
 	private String abbre;
-	private String projectId;
-	private String moduleId;
 	private String priority;
 	private String severity;
 	private String type;
@@ -22,8 +20,13 @@ public class DefectDTO {
 	private String foundIn;
 	private String fixedIn;
 	private Date dateAndTime;
-	private String moduleName;
+	private Long pid;
+	private String projectId;
 	private String projectName;
+	private Long mid;
+	private String moduleId;
+	private String moduleName;
+	
 
 	
 	public String getDefectId() {
@@ -38,18 +41,7 @@ public class DefectDTO {
 	public void setAbbre(String abbre) {
 		this.abbre = abbre;
 	}
-	public String getProjectId() {
-		return projectId;
-	}
-	public void setProjectId(String projectId) {
-		this.projectId = projectId;
-	}
-	public String getModuleId() {
-		return moduleId;
-	}
-	public void setModuleId(String moduleId) {
-		this.moduleId = moduleId;
-	}
+	
 	public String getDefectDescription() {
 		return defectDescription;
 	}
@@ -147,6 +139,36 @@ public class DefectDTO {
 	}
 	public void setStatus(String status) {
 		this.status = status;
+	}
+	public Long getPid() {
+		return pid;
+	}
+	public void setPid(Long pid) {
+		this.pid = pid;
+	}
+	public String getProjectId() {
+		return projectId;
+	}
+	public void setProjectId(String projectId) {
+		this.projectId = projectId;
+	}
+	public Long getMid() {
+		return mid;
+	}
+	public void setMid(Long mid) {
+		this.mid = mid;
+	}
+	public String getModuleId() {
+		return moduleId;
+	}
+	public void setModuleId(String moduleId) {
+		this.moduleId = moduleId;
+	}
+	public Long getDefid() {
+		return defid;
+	}
+	public void setDefid(Long defid) {
+		this.defid = defid;
 	}
 	
 	

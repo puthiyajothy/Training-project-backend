@@ -10,15 +10,15 @@ import org.springframework.data.repository.query.Param;
 import com.internal.project.project.entities.Defect;
 import com.internal.project.project.entities.Module;
 
-public interface DefectRepository extends JpaRepository<Defect, String> {
+public interface DefectRepository extends JpaRepository<Defect, Long> {
 
-	Defect getByDefectId(String defectId);
+	Defect getByDefectId(Long defid);
 
-	@Query(value = "FROM Defect WHERE project_id =:projectId")
-	List<Defect> getByProjectId(@Param("projectId") String projectId);
+	@Query(value = "FROM Defect WHERE p_id =:pid")
+	List<Defect> getByProjectId(@Param("projectId") Long pid);
 
 	@Query(value = "FROM Defect WHERE module_id =:moduleId")
-	List<Defect> getByModuleId(@Param("moduleId") String moduleId);
+	List<Defect> getByModuleId(@Param("moduleId") Long moduleId);
 
 	@Query(value = "FROM Defect WHERE date_and_time =:dateAndTime")
 	List<Defect> getByDefectDate(@Param("dateAndTime") Date dateAndTime);

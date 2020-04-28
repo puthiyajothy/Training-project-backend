@@ -50,7 +50,13 @@ public class ModuleController {
 
 	@PostMapping(value = "/createmodule")
 	public ResponseEntity<Object> createModule(@Valid @RequestBody ModuleData moduleData) {
-		moduleDataMapper.saveModuleforMapper(moduleData);
+		try {
+			moduleDataMapper.saveModuleforMapper(moduleData);
+
+		} catch (Exception e) {
+			logger.info("Controller -> Faild" + e.getMessage());
+
+		}
 		return null;
 
 	}
@@ -63,10 +69,10 @@ public class ModuleController {
 	}
 
 	// Get All By Project Id //
-	@GetMapping(value = "/GetAllmodule/{projectid}")
-	public List<Module> getModuleByProjectId(@PathVariable String projectid) {
+	@GetMapping(value = "/GetAllmodule/{pid}")
+	public List<Module> getModuleByProjectId(@PathVariable Long pid) {
 		logger.info("Module are listed ");
-		return moduleService.getByprojectId(projectid);
+		return moduleService.getBypid(pid);
 	}
 
 	// Get All Details in module Table
@@ -89,10 +95,10 @@ public class ModuleController {
 //	}
 
 	// Get Mapping For Get Module By Id
-	@GetMapping("/GetmoduleById/{moduleId}")
-	public ResponseEntity<ModuleData> getModuleById(@PathVariable String moduleId) {
+	@GetMapping("/GetmoduleById/{mid}")
+	public ResponseEntity<ModuleData> getModuleById(@PathVariable Long mid) {
 		logger.info("Module are get by id ");
-		return new ResponseEntity<>(moduleDataMapper.getByModuleId(moduleId), HttpStatus.OK);
+		return new ResponseEntity<>(moduleDataMapper.getByModuleId(mid), HttpStatus.OK);
 	}
 
 	// Get Mapping For Module Name
@@ -103,30 +109,29 @@ public class ModuleController {
 	}
 
 	// Delete Mapping For Module
-	@DeleteMapping("deleteModuleById/{moduleId}")
-	public void deleteById(@PathVariable String moduleId) {
+	@DeleteMapping("deleteModuleById/{mid}")
+	public void deleteById(@PathVariable Long mid) {
 		logger.info("Module are delete by id ");
-		moduleDataMapper.deleteById(moduleId);
+		moduleDataMapper.deleteById(mid);
 
 	}
 
 	// Put Mapping For Module
-	@PutMapping("/updateModule/{moduleId}")
-	public ResponseEntity<String> updateModule(@Valid @PathVariable(name = "moduleId") String moduleId,
+	@PutMapping("/updateModule/{mid}")
+	public ResponseEntity<String> updateModule(@Valid @PathVariable(name = "mid") Long mid,
 			@RequestBody ModuleData moduleData) {
 		logger.info("Modulecontroller -> updatedModule");
-		if (moduleDataMapper.UpdateModule(moduleId, moduleData) != null)
+		if (moduleDataMapper.UpdateModule(mid, moduleData) != null)
 			;
 		{
 			return new ResponseEntity<>("ok", HttpStatus.OK);
 		}
 	}
 
-	// Abbrivation for module
-	@PutMapping("/module/project/{projectId}")
-	public Module createNewModule(@PathVariable(name = "projectId") String projectId,
-			@RequestBody ModuleData moduleData) {
-		Project project = projectService.getByprojectId(projectId);
+	// Abbreviation for module
+	@PutMapping("/module/project/{pid}")
+	public Module createNewModule(@PathVariable(name = "pid") Long pid, @RequestBody ModuleData moduleData) {
+		Project project = projectService.getByprojectId(pid);
 		List<Module> modules = moduleRepository.findModuleByProject(project);
 		int a = modules.size();
 		String moduleSerial = project.getProjectId() + "-" + moduleData.getModuleId() + "-" + a;

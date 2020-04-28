@@ -3,6 +3,8 @@ package com.internal.project.project.entities;
 import java.sql.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -18,36 +20,26 @@ import org.springframework.format.annotation.DateTimeFormat.ISO;
 public class Defect {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long defid;
+	
 	@Size(min = 2, max = 50)
 	private String defectId;
 
-	@NotNull
-	@Size(min = 2, max = 20)
-	private String abbre;
-
-	@ManyToOne
-	@JoinColumn(name = "projectId", nullable = false)
-	private Project project;
-
-	@ManyToOne
-	@JoinColumn(name = "moduleId", nullable = false)
-	private Module module;
-
-//	@OneToOne
-//	@JoinColumn(name="configId",nullable=false)
-//	private DefectConfig defectConfig;
-//	
-//	public DefectConfig getDefectConfig() {
-//		return defectConfig;
-//	}
-//	public void setDefectConfig(DefectConfig defectConfig) {
-//		this.defectConfig = defectConfig;
-//	}
 	private String priority;
 	private String severity;
 	private String type;
 	private String status;
 
+	@ManyToOne
+	@JoinColumn(name = "pid", nullable = false)
+	private Project project;
+
+	@ManyToOne
+	@JoinColumn(name = "mid", nullable = false)
+	private Module module;
+	
+	
 	@NotNull
 	@Size(min = 2, max = 500)
 	private String defectDescription;
@@ -97,13 +89,6 @@ public class Defect {
 		this.defectId = defectId;
 	}
 
-	public String getAbbre() {
-		return abbre;
-	}
-
-	public void setAbbre(String abbre) {
-		this.abbre = abbre;
-	}
 
 	public String getDefectDescription() {
 		return defectDescription;
@@ -233,4 +218,13 @@ public class Defect {
 		this.status = status;
 	}
 
+	public Long getDefid() {
+		return defid;
+	}
+
+	public void setDefid(Long defid) {
+		this.defid = defid;
+	}
+
+	
 }

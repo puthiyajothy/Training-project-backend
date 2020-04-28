@@ -5,7 +5,8 @@ import java.util.List;
 import javax.persistence.CascadeType;
 
 import javax.persistence.Entity;
-
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -17,6 +18,8 @@ import javax.persistence.Table;
 public class Module {
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long mid;
 	private String moduleId;
 	private String moduleName;
 
@@ -39,7 +42,7 @@ public class Module {
 
 	// create relationship with project //
 	@ManyToOne
-	@JoinColumn(name = "projectid", nullable = false)
+	@JoinColumn(name = "pid", nullable = false)
 	private Project project;
 
 	public Project getProject() {
@@ -60,6 +63,14 @@ public class Module {
 
 	public void setSubModule(List<SubModule> subModule) {
 		this.subModule = subModule;
+	}
+
+	public Long getMid() {
+		return mid;
+	}
+
+	public void setMid(Long mid) {
+		this.mid = mid;
 	}
 
 }

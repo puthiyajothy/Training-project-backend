@@ -9,17 +9,17 @@ import org.springframework.data.repository.query.Param;
 import com.internal.project.project.entities.Module;
 import com.internal.project.project.entities.Project;
 
-public interface ModuleRepository extends JpaRepository<Module, String> {
+public interface ModuleRepository extends JpaRepository<Module, Long> {
 
-	Module getByModuleId(String moduleId);
+	Module getByModuleId(Long mid);
 
 //	@Query("SELECT  m.moduleName, s.subModuleName FROM Module m INNER JOIN SubModule s ON m.id = s.module.id WHERE m.project.id =:projectid")
 
 	@Query(value = "FROM Module WHERE module_name= :moduleName")
 	List<Module> getBymoduleName(@Param("moduleName") String moduleName);
 //
-	@Query("SELECT m FROM Module m WHERE m.project.id =:projectid")
-	List<Module> getByProjectId(@Param("projectid") String projectid);
+	@Query("SELECT m FROM Module m WHERE m.pid =:pid")
+	List<Module> getByPid(@Param("pid") Long pid);
 	
 //	List<Object> getSubmodule(@Param("projectid") String projectid);
 	

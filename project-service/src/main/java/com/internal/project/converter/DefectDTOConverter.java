@@ -17,39 +17,40 @@ public class DefectDTOConverter {
 
 	private static Logger logger = LogManager.getLogger(Defect.class);
 
-//========================To list all defect details=============================================================
+//To list all defect details
 	public static List<DefectDTO> defectEntityToDefectData(List<Defect> defectList) {
 
 		if (defectList != null) {
 			logger.info("Coverting DefectEntity to DefectData");
 			List<DefectDTO> listDefectData = new ArrayList<>();
 			for (Defect defect : defectList) {
-				
 				DefectDTO defectDTO = new DefectDTO();
 
+				defectDTO.setDefid(defect.getDefid());
 				defectDTO.setDefectId(defect.getDefectId());
-							
-				defectDTO.setProjectId(defect.getProject().getProjectId());
-				defectDTO.setProjectName(defect.getProject().getProjectName());
-				defectDTO.setModuleId(defect.getModule().getModuleId());
-				defectDTO.setModuleName(defect.getModule().getModuleName());
 				defectDTO.setDefectDescription(defect.getDefectDescription());
 				defectDTO.setStepsToRecreate(defect.getStepsToRecreate());
 				defectDTO.setAssignTo(defect.getAssignTo());
 				defectDTO.setReassignTo(defect.getReassignTo());
 				defectDTO.setEnteredBy(defect.getEnteredBy());
 				defectDTO.setFixedBy(defect.getFixedBy());
-                defectDTO.setAbbre(defect.getAbbre());
+//				defectDTO.setAbbre(defect.getAbbre());
 				defectDTO.setDateAndTime(defect.getDateAndTime());
 				defectDTO.setAvailableIn(defect.getAvailableIn());
 				defectDTO.setFoundIn(defect.getFoundIn());
 				defectDTO.setFixedIn(defect.getFixedIn());
-				 defectDTO.setSeverity(defect.getSeverity());
-				 defectDTO.setPriority(defect.getPriority());
-				 defectDTO.setType(defect.getType());
-				 defectDTO.setStatus(defect.getStatus());
-				//defectData.setName(defect.getDefectConfig().getName());
-				
+				defectDTO.setSeverity(defect.getSeverity());
+				defectDTO.setPriority(defect.getPriority());
+				defectDTO.setType(defect.getType());
+				defectDTO.setStatus(defect.getStatus());
+				defectDTO.setProjectId(defect.getProject().getProjectId());
+				defectDTO.setProjectName(defect.getProject().getProjectName());
+				defectDTO.setModuleId(defect.getModule().getModuleId());
+				defectDTO.setModuleName(defect.getModule().getModuleName());
+				defectDTO.setPid(defect.getProject().getPid());
+				defectDTO.setMid(defect.getModule().getMid());
+				// defectData.setName(defect.getDefectConfig().getName());
+
 				listDefectData.add(defectDTO);
 
 			}
@@ -67,6 +68,7 @@ public class DefectDTOConverter {
 		if (defectDTO != null) {
 			logger.info("Coverting DefectEntity to DefectDTO");
 
+			defectDTO.setDefid(defect.getDefid());
 			defectDTO.setDefectId(defect.getDefectId());
 			defectDTO.setProjectId(defect.getProject().getProjectId());
 			defectDTO.setProjectName(defect.getProject().getProjectName());
@@ -82,33 +84,29 @@ public class DefectDTOConverter {
 			defectDTO.setAvailableIn(defect.getAvailableIn());
 			defectDTO.setFoundIn(defect.getFoundIn());
 			defectDTO.setFixedIn(defect.getFixedIn());
-			 defectDTO.setAbbre(defect.getAbbre());
-			 defectDTO.setSeverity(defect.getSeverity());
-			 defectDTO.setPriority(defect.getPriority());
-			 defectDTO.setType(defect.getType());
-			 defectDTO.setStatus(defect.getStatus());
-				//defectData.setName(defect.getDefectConfig().getName());
+//			defectDTO.setAbbre(defect.getAbbre());
+			defectDTO.setSeverity(defect.getSeverity());
+			defectDTO.setPriority(defect.getPriority());
+			defectDTO.setType(defect.getType());
+			defectDTO.setStatus(defect.getStatus());
+			defectDTO.setPid(defect.getProject().getPid());
+			defectDTO.setMid(defect.getModule().getMid());
+
+			// defectData.setName(defect.getDefectConfig().getName());
 			return defectDTO;
 		}
 		return null;
 	}
 
-	
-//========================To convert DefectDTO to DefectEntity =====================================================
-	
+//convert DefectDTO to DefectEntity 
+
 	public static Defect defectDataToDefectEntity(DefectDTO defectDTO) {
 		Defect defect = new Defect();
 		if (defectDTO != null) {
 			logger.info("Coverting DefectData to DefectEntity");
 			
-			Project project = new Project();
-			Module module = new Module();
-			
-			module.setModuleId(defectDTO.getModuleId());
+			defect.setDefid(defectDTO.getDefid());
 			defect.setDefectId(defectDTO.getDefectId());
-			project.setProjectId(defectDTO.getProjectId());
-			defect.setProject(project);
-			defect.setModule(module);
 			defect.setDefectDescription(defectDTO.getDefectDescription());
 			defect.setStepsToRecreate(defectDTO.getStepsToRecreate());
 			defect.setAssignTo(defectDTO.getAssignTo());
@@ -119,12 +117,26 @@ public class DefectDTOConverter {
 			defect.setAvailableIn(defectDTO.getAvailableIn());
 			defect.setFoundIn(defectDTO.getFoundIn());
 			defect.setFixedIn(defectDTO.getFixedIn());
-			 defect.setAbbre(defectDTO.getAbbre());
-			 defect.setSeverity(defectDTO.getSeverity());
-			 defect.setPriority(defectDTO.getPriority());
-			 defect.setType(defectDTO.getType());
-			 defect.setStatus(defectDTO.getStatus());
+//			defect.setAbbre(defectDTO.getAbbre());
+			defect.setSeverity(defectDTO.getSeverity());
+			defect.setPriority(defectDTO.getPriority());
+			defect.setType(defectDTO.getType());
+			defect.setStatus(defectDTO.getStatus());
+
+			Project projectobj = new Project();
+			projectobj.setPid(defectDTO.getPid());
+			projectobj.setProjectId(defectDTO.getProjectId());
+			projectobj.setProjectName(defectDTO.getProjectName());
+			defect.setProject(projectobj);
+
+			Module moduleobj = new Module();
+			moduleobj.setMid(defectDTO.getMid());
+			moduleobj.setModuleId(defectDTO.getModuleId());
+			moduleobj.setModuleName(defectDTO.getModuleName());
+			defect.setModule(moduleobj);
+
 			return defect;
+
 		}
 		return null;
 	}

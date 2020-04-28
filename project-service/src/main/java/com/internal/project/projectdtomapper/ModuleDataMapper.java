@@ -24,12 +24,9 @@ public class ModuleDataMapper {
 		Module module = ModuleConverter.moduleDataToModule(moduleData);
 		return moduleService.createModule(module);
 	}
-//	public List<ModuleData> getAllSubmoduleForMapper(String projectid){
-//		List<Module>moduleList =moduleService.getSubmodule(projectid);
-//		return ModuleConverter.moduleToModuleData(moduleList);
-//	}
-	public ModuleData getByModuleId(String moduleId) {
-		Module module = moduleService.getByModuleId(moduleId);
+
+	public ModuleData getByModuleId(Long mid) {
+		Module module = moduleService.getByModuleId(mid);
 		return ModuleConverter.moduleToModuleData(module);
 		
 	}
@@ -39,13 +36,13 @@ public class ModuleDataMapper {
 		return ModuleConverter.moduleToModuleData(module);
 	}
 	
-	public Module UpdateModule(String moduleId, ModuleData moduleData) {
+	public Module UpdateModule(Long mid, ModuleData moduleData) {
 		Module module = ModuleConverter.moduleDataToModule(moduleData);
-		return moduleService.updateModule(moduleId, module);
+		return moduleService.updateModule(mid, module);
 	}
 	
-	public ModuleData deleteById(String moduleId) {
-		moduleService.deleteById(moduleId);
+	public ModuleData deleteById(Long mid) {
+		moduleService.deleteById(mid);
 		return null;
 	}
 
