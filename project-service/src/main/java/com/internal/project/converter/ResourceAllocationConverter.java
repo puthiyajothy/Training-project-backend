@@ -7,7 +7,6 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.internal.project.dto.ResourceAllocationDto;
 import com.internal.project.entities.Project;
 import com.internal.project.entities.ResourceAllocation;
@@ -26,7 +25,7 @@ public class ResourceAllocationConverter {
 		if (resourceAllocation != null) {
 			logger.info("Resource Allocation Converter--- successfully Converte Resource Allocation Entity To DTO");
 			resourceAllocationDto.setResourceId(resourceAllocation.getResourceId());
-			resourceAllocationDto.setProjectId(resourceAllocation.getProject().getProjectId());
+			resourceAllocationDto.setProjectid(resourceAllocation.getProject().getProjectId());
 			resourceAllocationDto.setProjectName(resourceAllocation.getProject().getProjectName());
 
 			return resourceAllocationDto;
@@ -44,7 +43,7 @@ public class ResourceAllocationConverter {
 			resourceAllocation.setEmpId(resourceAllocationDto.getEmpId());
 //			<----Set Project Variable to Resource Allocation DTo---->
 			Project project = new Project();
-			project.setProjectId(resourceAllocationDto.getProjectId());
+			project.setProjectId(resourceAllocationDto.getProjectid());
 			project.setProjectName(resourceAllocationDto.getProjectName());
 			resourceAllocation.setProject(project);
 			
@@ -65,7 +64,7 @@ public class ResourceAllocationConverter {
 				ResourceAllocationDto resourceAllocationDto = new ResourceAllocationDto();
 				resourceAllocationDto.setResourceId(resourceAllocation.getResourceId());
 				resourceAllocationDto.setEmpId(resourceAllocation.getEmpId());
-				resourceAllocationDto.setProjectId(resourceAllocation.getProject().getProjectId());
+				resourceAllocationDto.setProjectid(resourceAllocation.getProject().getProjectId());
 				resourceAllocationDto.setProjectName(resourceAllocation.getProject().getProjectName());
 				
 				ListresourceAllocationDto.add(resourceAllocationDto);
@@ -90,7 +89,7 @@ public class ResourceAllocationConverter {
 				resourceAllocation.setEmpId(resourceAllocationDto.getEmpId());
 //				<----Set Project Variable to Resource Allocation DTo---->
 				Project project = new Project();
-				project.setProjectId(resourceAllocationDto.getProjectId());
+				project.setProjectId(resourceAllocationDto.getProjectid());
 				resourceAllocation.setProject(project);
 				ListresourceAllocation.add(resourceAllocation);
 

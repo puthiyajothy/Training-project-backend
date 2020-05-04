@@ -31,8 +31,8 @@ public class ProjectDtoMapper {
 		return projectimpl.createProject(project);
 	}
 
-	public ProjectDto getByProjectId(Long projectId) {
-		Project project = projectimpl.getByprojectId(projectId);
+	public ProjectDto getByProjectId(Long projectid) {
+		Project project = projectimpl.getByprojectId(projectid);
 		return ProjectConverter.projectToProjectDto(project);
 	}
 
@@ -66,8 +66,8 @@ public class ProjectDtoMapper {
 		return projectimpl.updateProject(project);
 	}
 
-	public ProjectDto delete(Long projectId) {
-		projectimpl.delete(projectId);
+	public ProjectDto delete(Long projectid) {
+		projectimpl.delete(projectid);
 		return null;
 
 	}

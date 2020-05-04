@@ -3,29 +3,46 @@ package com.internal.project.dto;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ModuleData {
+public class ModuleDto {
 
+	private Long mid;
 	private String moduleId;
 	private String moduleName;
-	private Long projectId;
-//	private String subModuleId;
-//	private String subModuleName;
+	private Long projectid;
+	private String projectName;
 
-	public ModuleData(String moduleId, String moduleName) {
+	public ModuleDto() {
+	}
+
+	public String getProjectName() {
+		return projectName;
+	}
+
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+
+	public ModuleDto(Long mid, String moduleId, String moduleName) {
 		super();
+		this.mid = mid;
 		this.moduleId = moduleId;
 		this.moduleName = moduleName;
 	}
 
-	public ModuleData() {
+	public Long getMid() {
+		return mid;
 	}
 
-	public Long getProjectId() {
-		return projectId;
+	public void setMid(Long mid) {
+		this.mid = mid;
 	}
 
-	public void setProjectId(Long projectId) {
-		this.projectId = projectId;
+	public Long getProjectid() {
+		return projectid;
+	}
+
+	public void setProjectid(Long projectid) {
+		this.projectid = projectid;
 	}
 
 	// getters setters for module DTO
@@ -64,6 +81,5 @@ public class ModuleData {
 //	}
 //
 //	// getters setters for project id
-	
 
 }

@@ -1,13 +1,11 @@
-package com.internal.project.converter;
-//package com.sgic.internal.defecttracker.project.controller.converter;
+//package com.internal.project.converter;
 //
 //import java.util.ArrayList;
 //import java.util.List;
 //
-//import com.sgic.internal.defecttracker.project.controller.dto.ResourceAllocationListDto;
-//import com.sgic.internal.defecttracker.project.entities.Employee;
-//import com.sgic.internal.defecttracker.project.entities.ResourceAllocationList;
-//
+//import com.internal.project.dto.ResourceAllocationListDto;
+//import com.internal.project.entities.Employee;
+//import com.internal.project.entities.ResourceAllocationList;
 //public class ResourceAllocationListConverter {
 //
 //	public static ResourceAllocationListDto ResourceAllocationListToResourceAllocationListDto(
@@ -18,7 +16,7 @@ package com.internal.project.converter;
 //			resourceAllocationListDto.setResourceId(resourceAllocationList.getResourceId());
 //			resourceAllocationListDto.setEmpId(resourceAllocationList.getEmpId());
 //			resourceAllocationListDto.setEmployeeid(resourceAllocationList.getEmployeeObj().getEmployeeid());
-//			resourceAll	ocationListDto.setFirstname(resourceAllocationList.getEmployeeObj().getFirstname());
+//			resourceAllocationListDto.setFirstname(resourceAllocationList.getEmployeeObj().getFirstname());
 //			resourceAllocationListDto.setName(resourceAllocationList.getEmployeeObj().getName());
 //			resourceAllocationListDto.setEmail(resourceAllocationList.getEmployeeObj().getEmail());
 //			resourceAllocationListDto.setDesignationid(resourceAllocationList.getEmployeeObj().getDesignationid());

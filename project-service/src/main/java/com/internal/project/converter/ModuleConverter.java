@@ -3,75 +3,53 @@ package com.internal.project.converter;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.internal.project.dto.ModuleData;
+import com.internal.project.dto.ModuleDto;
 import com.internal.project.entities.Module;
 import com.internal.project.entities.Project;
-import com.internal.project.entities.SubModule;
 
 public class ModuleConverter {
 	
-	public static ModuleData moduleToModuleData(Module module) {
-		ModuleData moduleData = new ModuleData();
+	public static ModuleDto moduleToModuleDto(Module module) {
+		ModuleDto moduleDto = new ModuleDto();
 
 		if (module != null) {
-			moduleData.setModuleId(module.getModuleId());
-			moduleData.setModuleName(module.getModuleName());
-
-			new Module();
-//			moduleData.setProjectid(module.getProject().getProjectId());
-
-			//get sub module id
-//			Module module2=new Module();
-//			moduleData.setSubModuleId(module.getSubModule().getSubModuleId());
-//			moduleData.setSubModuleName(module.getSubModule().getSubModuleName());
-			
-//			moduleData.setAbbr(module.getAbbr());
-			return moduleData;
+			moduleDto.setMid(module.getMid());
+			moduleDto.setModuleId(module.getModuleId());
+			moduleDto.setModuleName(module.getModuleName());
+			moduleDto.setProjectid(module.getProject().getProjectId());
+			moduleDto.setProjectName(module.getProject().getProjectName());
+			return moduleDto;
 		}
 		return null;
 	}
 	
-	public static Module moduleDataToModule(ModuleData moduleData) {
-		Module module = new Module();  
-		// project constructor
+	public static Module moduleDataToModule(ModuleDto moduleDto) {
+		Module module = new Module(); 
+		module.setModuleId(moduleDto.getModuleId());
+		module.setModuleName(moduleDto.getModuleName());
 		Project project = new Project();
+		project.setProjectId(moduleDto.getProjectid());
+		project.setProjectName(moduleDto.getProjectName());
+		module.setProject(project);
 		
-		new SubModule();
-		
-		module.setModuleId(moduleData.getModuleId());
-		module.setModuleName(moduleData.getModuleName());
-//		module.setAbbr(moduleData.getAbbr());
-		
-		// get by project id
-		project.setProjectId(moduleData.getProjectId());
-//		module.setProject(project);
-		
-		// get by sub module id
-//		subModule.setSubModuleId(moduleData.getSubModuleId());
-//		subModule.setSubModuleName(moduleData.getSubModuleName());
-//		module.setSubModule(subModule);
 		
 		return module;
 	}
 	
-	public static List<ModuleData> moduleToModuleData(List<Module> moduleList) {
+	public static List<ModuleDto> moduleToModuleData(List<Module> moduleList) {
 
 		if (moduleList != null) {
-			List<ModuleData> lModuleData = new ArrayList<>();
+			List<ModuleDto> lModuleData = new ArrayList<>();
 			for (Module module : moduleList) {
-				ModuleData moduleData = new ModuleData();
+				ModuleDto moduleDto = new ModuleDto();
 				
-				moduleData.setModuleId(module.getModuleId());
-				moduleData.setModuleName(module.getModuleName());
-//				moduleData.setAbbr(module.getAbbr());
-				// get project id
-//				moduleData.setProjectid(module.getProject().getProjectId());
+				moduleDto.setModuleId(module.getModuleId());
+				moduleDto.setModuleName(module.getModuleName());
+				moduleDto.setProjectid(module.getProject().getProjectId());
+				moduleDto.setProjectName(module.getProject().getProjectName());
+		
 				
-				// get sub module id
-//				moduleData.setSubModuleId(module.getSubModule().getSubModuleId());
-//				moduleData.setSubModuleName(module.getSubModule().getSubModuleName());
 				
-				lModuleData.add(moduleData);
 			}
 
 			return lModuleData;

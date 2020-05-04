@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 
 import com.internal.project.entities.Defect;
 import com.internal.project.repositories.DefectRepository;
-import com.internal.project.repositories.ProjectRepository;
 import com.internal.project.services.DefectService;
 
 import org.apache.logging.log4j.LogManager;

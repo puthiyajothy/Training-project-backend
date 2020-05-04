@@ -14,7 +14,7 @@ public interface SubModuleRepository extends JpaRepository<SubModule, String> {
 	@Query(value = "FROM SubModule WHERE module_id= :subModuleId")
 	SubModule getBySubModuleId(@Param("subModuleId") String subModuleId);
 	
-	List<SubModule> findModuleBysubModuleId(Module module);
+//	List<SubModule> findModuleBysubModuleId(Module module);
 
 	@Query(value = "FROM SubModule WHERE sub_module_name= :subModuleName")
 	List<SubModule> getBysubModuleName(@Param("subModuleName") String subModuleName);

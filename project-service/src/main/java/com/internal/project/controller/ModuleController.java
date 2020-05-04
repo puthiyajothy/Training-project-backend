@@ -18,7 +18,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
 
-import com.internal.project.dto.ModuleData;
+import com.internal.project.dto.ModuleDto;
+import com.internal.project.dto.ProjectDto;
 import com.internal.project.entities.Module;
 import com.internal.project.mapper.ModuleDataMapper;
 import com.internal.project.repositories.ModuleRepository;
@@ -43,22 +44,33 @@ public class ModuleController {
 	@Autowired
 	public ModuleService moduleService;
 
+	
+//	public ResponseEntity<Object> createModule(@Valid @RequestBody ModuleData moduleData) {
+//		try {
+//			moduleDataMapper.saveModuleforMapper(moduleData);
+//
+//		} catch (Exception e) {
+//			logger.info("Controller -> Faild" + e.getMessage());
+//
+//		}
+//		return null;
+//
+//	}
 	@PostMapping(value = "/createmodule")
-	public ResponseEntity<Object> createModule(@Valid @RequestBody ModuleData moduleData) {
+	public ResponseEntity<Object> createmodule(@Valid @RequestBody Module module) {
 		try {
-			moduleDataMapper.saveModuleforMapper(moduleData);
-
+			moduleRepository.save(module);
+			logger.info("Project created");
 		} catch (Exception e) {
-			logger.info("Controller -> Faild" + e.getMessage());
-
+			logger.info("Project Controller ---> Error" + e.getMessage());
 		}
-		return null;
 
+		return null;
 	}
 
 	// Get Mapping For Get All Module
 	@GetMapping(value = "/GetAllmodule")
-	public ResponseEntity<List<ModuleData>> listModuleInfo() {
+	public ResponseEntity<List<ModuleDto>> listModuleInfo() {
 		logger.info("Module are listed ");
 		return new ResponseEntity<>(moduleDataMapper.getAllModuleForMapper(), HttpStatus.OK);
 	}
@@ -72,14 +84,14 @@ public class ModuleController {
 
 	// Get Mapping For Get Module By Id
 	@GetMapping("/GetmoduleById/{mid}")
-	public ResponseEntity<ModuleData> getModuleById(@PathVariable Long mid) {
+	public ResponseEntity<ModuleDto> getModuleById(@PathVariable Long mid) {
 		logger.info("Module are get by id ");
 		return new ResponseEntity<>(moduleDataMapper.getByModuleId(mid), HttpStatus.OK);
 	}
 
 	// Get Mapping For Module Name
 	@GetMapping("/getModuleName/{moduleName}")
-	public List<ModuleData> getBymoduleName(@PathVariable String moduleName) {
+	public List<ModuleDto> getBymoduleName(@PathVariable String moduleName) {
 		logger.info("Module are get by name ");
 		return moduleDataMapper.getBymoduleNameForMapper(moduleName);
 	}
@@ -95,9 +107,9 @@ public class ModuleController {
 	// Put Mapping For Module
 	@PutMapping("/updateModule/{mid}")
 	public ResponseEntity<String> updateModule(@Valid @PathVariable(name = "mid") Long mid,
-			@RequestBody ModuleData moduleData) {
+			@RequestBody ModuleDto moduleDto) {
 		logger.info("Modulecontroller -> updatedModule");
-		if (moduleDataMapper.UpdateModule(mid, moduleData) != null)
+		if (moduleDataMapper.UpdateModule(mid, moduleDto) != null)
 			;
 		{
 			return new ResponseEntity<>("ok", HttpStatus.OK);

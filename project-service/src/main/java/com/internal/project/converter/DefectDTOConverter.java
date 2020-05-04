@@ -90,8 +90,6 @@ public class DefectDTOConverter {
 			defectDTO.setStatus(defect.getStatus());
 			
 			defectDTO.setMid(defect.getModule().getMid());
-
-			// defectData.setName(defect.getDefectConfig().getName());
 			return defectDTO;
 		}
 		return null;

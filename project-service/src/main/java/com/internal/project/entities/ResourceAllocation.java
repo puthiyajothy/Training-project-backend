@@ -28,7 +28,7 @@ public class ResourceAllocation implements Serializable {
 
 //	<---Project With Resource Allocation Relationship --->
 	@ManyToOne
-	@JoinColumn(name = "pid", nullable = false)
+	@JoinColumn(name = "project_id", nullable = false)
 	private Project project;
 
 	public ResourceAllocation(Long empId, Project project) {

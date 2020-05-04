@@ -7,7 +7,7 @@ public class ResourceAllocationDto {
 	private Long resourceId;
 //	private String resourceName;
 	private String projectName;
-	private Long projectId;
+	private Long projectid;
 	private Long empId;
 	private String employeeid;
 	private String name;
@@ -73,12 +73,13 @@ public class ResourceAllocationDto {
 	public void setDesignationname(String designationname) {
 		this.designationname = designationname;
 	}
-	public Long getProjectId() {
-		return projectId;
+	public Long getProjectid() {
+		return projectid;
 	}
-	public void setProjectId(Long projectId) {
-		this.projectId = projectId;
+	public void setProjectid(Long projectid) {
+		this.projectid = projectid;
 	}
+	
 	
 	
 	

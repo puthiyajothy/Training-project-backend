@@ -42,7 +42,7 @@ public class Module {
 
 	// create relationship with project //
 	@ManyToOne
-	@JoinColumn(name = "projectId", nullable = false)
+	@JoinColumn(name = "project_id", nullable = false)
 	private Project project;
 
 	public Project getProject() {

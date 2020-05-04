@@ -18,7 +18,7 @@ public class ProjectConverter {
 
 		if (project != null) {
 			
-			projectDto.setProjectId(project.getProjectId());
+			projectDto.setProjectid(project.getProjectId());
 			projectDto.setProjectName(project.getProjectName());
 			projectDto.setType(project.getType());
 			projectDto.setStartDate(project.getStartDate());
@@ -35,7 +35,7 @@ public class ProjectConverter {
 	public static Project projectDtoToProject(ProjectDto projectDto) {
 		Project project = new Project();
 
-		project.setProjectId(projectDto.getProjectId());
+		project.setProjectId(projectDto.getProjectid());
 		project.setProjectName(projectDto.getProjectName());
 		project.setType(projectDto.getType());
 		project.setEndDate(projectDto.getEndDate());
@@ -55,7 +55,7 @@ public class ProjectConverter {
 				
 				ProjectDto projectDto = new ProjectDto();
 
-				projectDto.setProjectId(project.getProjectId());
+				projectDto.setProjectid(project.getProjectId());
 				projectDto.setProjectName(project.getProjectName());
 				projectDto.setType(project.getType());
 				projectDto.setStartDate(project.getStartDate());

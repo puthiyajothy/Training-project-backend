@@ -66,11 +66,11 @@ public class ProjectController {
 	}
 
 	// Get Mapping For Get Project By Id
-	@GetMapping("/getProjectById/{projectId}")
-	public ResponseEntity<ProjectDto> getProjectById(@PathVariable Long projectId) {
+	@GetMapping("/getProjectById/{projectid}")
+	public ResponseEntity<ProjectDto> getProjectById(@PathVariable Long projectid) {
 		try {
 			logger.info("Projects are get by id ");
-			return  new ResponseEntity<>(projectDtoMapper.getByProjectId(projectId), HttpStatus.OK);
+			return  new ResponseEntity<>(projectDtoMapper.getByProjectId(projectid), HttpStatus.OK);
 
 		} catch (Exception e) {
 			logger.info("Project Controller ---> Error" + e.getMessage());
@@ -80,10 +80,10 @@ public class ProjectController {
 
 	// Delete project
 	@DeleteMapping("deleteById/{projectid}")
-	public ResponseEntity<String> deleteproject(@PathVariable("projectid")  Long projectId) {
+	public ResponseEntity<String> deleteproject(@PathVariable("projectid")  Long projectid) {
 		try {
 			logger.info("Already deleted ");
-			projectRepo.deleteById(projectId);
+			projectRepo.deleteById(projectid);
 //			projectDtoMapper.delete(projectId);
 			return new ResponseEntity<>("Deleted Successfully", HttpStatus.OK);
 
@@ -95,7 +95,7 @@ public class ProjectController {
 	}
 
 	// Put Mapping For Project
-	@PutMapping("/updateProject/{projectId}")
+	@PutMapping("/updateProject/{projectid}")
 	public ResponseEntity<String> updateProject(@RequestBody ProjectDto projectDto){
 		try {
 			logger.info("Projectcontroller -> updatedproject");

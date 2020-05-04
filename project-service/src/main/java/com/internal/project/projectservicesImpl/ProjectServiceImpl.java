@@ -21,8 +21,8 @@ public class ProjectServiceImpl implements ProjectService {
 
 
 	@Override
-	public boolean isProjectAlreadyExists(Long projectId) {
-		return projectRepository.existsById(projectId);
+	public boolean isProjectAlreadyExists(Long projectid) {
+		return projectRepository.existsById(projectid);
 	}
 
 	@Override
@@ -31,8 +31,8 @@ public class ProjectServiceImpl implements ProjectService {
 	}
 
 	@Override
-	public Project getByprojectId(Long projectId) {
-		return projectRepository.getByprojectId(projectId);
+	public Project getByprojectId(Long projectid) {
+		return projectRepository.getByprojectId(projectid);
 	}
 
 	@Override
@@ -66,8 +66,8 @@ public class ProjectServiceImpl implements ProjectService {
 	}
 
 	@Override
-	public void delete(Long projectId) {
-		projectRepository.deleteById(projectId);
+	public void delete(Long projectid) {
+		projectRepository.deleteById(projectid);
 	}
 
 	@Override

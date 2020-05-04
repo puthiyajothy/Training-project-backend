@@ -1,0 +1,720 @@
+2020-05-03 06:42:59.895  INFO 2100 --- [restartedMain] c.t.i.employee.EmployeeApplication       : No active profile set, falling back to default profiles: default
+2020-05-03 06:43:04.534  INFO 2100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-03 06:43:04.808  INFO 2100 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 140ms. Found 2 JPA repository interfaces.
+2020-05-03 06:43:05.314  INFO 2100 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01a2024f-a178-3d0c-9754-6c7a0b58ff07
+2020-05-03 06:43:05.536  INFO 2100 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 06:43:06.868  INFO 2100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2020-05-03 06:43:06.898  INFO 2100 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 06:43:06.898  INFO 2100 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-03 06:43:07.946  INFO 2100 --- [restartedMain] o.a.c.c.C.[.[.[/employeeservice]         : Initializing Spring embedded WebApplicationContext
+2020-05-03 06:43:07.960  INFO 2100 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 7893 ms
+2020-05-03 06:43:08.380  INFO 2100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-03 06:43:33.667  INFO 2100 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-03 06:43:33.804  INFO 2100 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 06:43:33.914  INFO 2100 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-05-03 06:43:34.082  INFO 2100 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 06:43:34.227  INFO 2100 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-03 06:43:35.065  INFO 2100 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 06:43:35.080  INFO 2100 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 06:43:35.778  WARN 2100 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 06:43:35.778  INFO 2100 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 06:43:35.792  WARN 2100 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 06:43:35.792  INFO 2100 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 06:43:35.885  WARN 2100 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 06:43:36.107  INFO 2100 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 06:43:36.478  WARN 2100 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2020-05-03 06:43:37.734  WARN 2100 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-03 06:43:37.878  INFO 2100 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-05-03 06:43:37.944  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 06:43:38.821  INFO 2100 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 06:43:38.837  INFO 2100 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 06:43:39.005  INFO 2100 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 06:43:39.005  INFO 2100 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 06:43:39.268  INFO 2100 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 06:43:39.547  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 06:43:39.547  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 06:43:39.547  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 06:43:39.547  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 06:43:39.547  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 06:43:39.547  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 06:43:39.547  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 06:43:39.845  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 06:43:39.851  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 06:43:39.851  INFO 2100 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 06:43:39.851  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588468419851 with initial instances count: 1
+2020-05-03 06:43:39.866  INFO 2100 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2020-05-03 06:43:39.866  INFO 2100 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588468419866, current=UP, previous=STARTING]
+2020-05-03 06:43:39.866  INFO 2100 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084: registering service...
+2020-05-03 06:43:39.955  INFO 2100 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path '/employeeservice'
+2020-05-03 06:43:39.955  INFO 2100 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2020-05-03 06:43:39.955  INFO 2100 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084 - registration status: 204
+2020-05-03 06:43:40.367  INFO 2100 --- [restartedMain] c.t.i.employee.EmployeeApplication       : Started EmployeeApplication in 44.376 seconds (JVM running for 47.954)
+2020-05-03 06:48:40.135  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 06:53:42.379  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 06:54:24.092  WARN 2100 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=49s584ms324µs100ns).
+2020-05-03 06:54:24.426  WARN 2100 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor timed out
+
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(Unknown Source) [na:1.8.0_201]
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66) ~[eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+
+2020-05-03 06:54:24.361  WARN 2100 --- [DiscoveryClient-1] c.netflix.discovery.TimedSupervisorTask  : task supervisor timed out
+
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(Unknown Source) [na:1.8.0_201]
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66) ~[eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+
+2020-05-03 06:54:24.476 ERROR 2100 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.put(WebResource.java:529) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.sendHeartBeat(AbstractJerseyEurekaHttpClient.java:102) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$3.execute(EurekaHttpClientDecorator.java:92) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.sendHeartBeat(EurekaHttpClientDecorator.java:89) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:864) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.socketRead(Unknown Source) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_201]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.10.jar:4.5.10]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 26 common frames omitted
+
+2020-05-03 06:54:24.527  WARN 2100 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2020-05-03 06:54:24.520 ERROR 2100 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.get(WebResource.java:509) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getApplicationsInternal(AbstractJerseyEurekaHttpClient.java:194) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.getDelta(AbstractJerseyEurekaHttpClient.java:170) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$7.execute(EurekaHttpClientDecorator.java:152) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.getDelta(EurekaHttpClientDecorator.java:149) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.getAndUpdateDelta(DiscoveryClient.java:1103) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.fetchRegistry(DiscoveryClient.java:985) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.refreshRegistry(DiscoveryClient.java:1497) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$CacheRefreshThread.run(DiscoveryClient.java:1464) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.socketRead(Unknown Source) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_201]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.10.jar:4.5.10]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 29 common frames omitted
+
+2020-05-03 06:54:24.652  WARN 2100 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2020-05-03 06:54:24.788  INFO 2100 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution succeeded on retry #1
+2020-05-03 06:54:24.789  INFO 2100 --- [DiscoveryClient-CacheRefreshExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution succeeded on retry #1
+2020-05-03 06:58:44.322  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:03:45.492  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:08:45.565  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:13:45.682  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:18:46.309  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:23:46.479  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:28:46.522  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:33:46.528  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:38:46.606  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:43:46.620  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:48:46.643  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:53:46.666  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 07:58:46.740  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:03:46.757  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:08:46.776  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:13:46.959  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:18:47.130  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:23:47.134  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:30:39.868  WARN 2100 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2m40s51ms557µs100ns).
+2020-05-03 08:30:57.178  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:35:57.276  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:40:58.046  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:45:21.178  INFO 2100 --- [http-nio-8084-exec-1] o.a.c.c.C.[.[.[/employeeservice]         : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 08:45:21.255  INFO 2100 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-03 08:45:27.690  INFO 2100 --- [http-nio-8084-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6420 ms
+2020-05-03 08:45:58.059  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:50:58.082  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 08:55:58.116  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 09:00:58.150  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 09:05:59.710  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:00:37.677  WARN 2100 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=53m25s512ms987µs1ns).
+2020-05-03 10:03:53.858  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:08:55.196  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:13:56.355  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:28:49.484  WARN 2100 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=13m38s814ms38µs799ns).
+2020-05-03 10:32:07.179  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:37:07.237  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:42:07.286  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:47:07.293  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:52:07.398  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 10:57:07.457  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:02:07.551  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:07:07.566  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:12:07.607  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:17:07.761  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:22:07.839  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:27:07.880  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:32:07.896  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:37:09.254  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:42:09.282  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:47:09.333  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:52:09.473  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 11:57:09.533  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:12:30.160  WARN 2100 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h13m28s385ms622µs300ns).
+2020-05-03 13:12:45.854  WARN 2100 --- [DiscoveryClient-0] c.netflix.discovery.TimedSupervisorTask  : task supervisor timed out
+
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(Unknown Source) [na:1.8.0_201]
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66) ~[eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+
+2020-05-03 13:12:45.854  WARN 2100 --- [DiscoveryClient-1] c.netflix.discovery.TimedSupervisorTask  : task supervisor timed out
+
+java.util.concurrent.TimeoutException: null
+	at java.util.concurrent.FutureTask.get(Unknown Source) [na:1.8.0_201]
+	at com.netflix.discovery.TimedSupervisorTask.run(TimedSupervisorTask.java:66) ~[eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+
+2020-05-03 13:12:46.750  INFO 2100 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084 - Re-registering apps/EMPLOYEE-SERVICE
+2020-05-03 13:12:47.094  INFO 2100 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084: registering service...
+2020-05-03 13:12:52.682  INFO 2100 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084: registering service...
+2020-05-03 13:13:06.674  WARN 2100 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46s709ms914µs800ns).
+2020-05-03 13:13:20.498 ERROR 2100 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.InstanceInfoReplicator.run(InstanceInfoReplicator.java:121) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.socketRead(Unknown Source) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_201]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.10.jar:4.5.10]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 28 common frames omitted
+
+2020-05-03 13:13:22.570  WARN 2100 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2020-05-03 13:13:20.498 ERROR 2100 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RedirectingEurekaHttpClient  : Request execution error. endpoint=DefaultEndpoint{ serviceUrl='http://localhost:8761/eureka/}
+
+com.sun.jersey.api.client.ClientHandlerException: java.net.SocketTimeoutException: Read timed out
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:187) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.filter.GZIPContentEncodingFilter.handle(GZIPContentEncodingFilter.java:123) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.EurekaIdentityHeaderFilter.handle(EurekaIdentityHeaderFilter.java:27) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.sun.jersey.api.client.Client.handle(Client.java:652) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.handle(WebResource.java:682) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource.access$200(WebResource.java:74) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.sun.jersey.api.client.WebResource$Builder.post(WebResource.java:570) ~[jersey-client-1.19.1.jar:1.19.1]
+	at com.netflix.discovery.shared.transport.jersey.AbstractJerseyEurekaHttpClient.register(AbstractJerseyEurekaHttpClient.java:56) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.MetricsCollectingEurekaHttpClient.execute(MetricsCollectingEurekaHttpClient.java:73) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RedirectingEurekaHttpClient.execute(RedirectingEurekaHttpClient.java:89) ~[eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.RetryableEurekaHttpClient.execute(RetryableEurekaHttpClient.java:120) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator$1.execute(EurekaHttpClientDecorator.java:59) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.SessionedEurekaHttpClient.execute(SessionedEurekaHttpClient.java:77) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.shared.transport.decorator.EurekaHttpClientDecorator.register(EurekaHttpClientDecorator.java:56) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.register(DiscoveryClient.java:847) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient.renew(DiscoveryClient.java:870) [eureka-client-1.9.13.jar:1.9.13]
+	at com.netflix.discovery.DiscoveryClient$HeartbeatThread.run(DiscoveryClient.java:1423) [eureka-client-1.9.13.jar:1.9.13]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source) [na:1.8.0_201]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source) [na:1.8.0_201]
+	at java.lang.Thread.run(Unknown Source) [na:1.8.0_201]
+Caused by: java.net.SocketTimeoutException: Read timed out
+	at java.net.SocketInputStream.socketRead0(Native Method) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.socketRead(Unknown Source) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_201]
+	at java.net.SocketInputStream.read(Unknown Source) ~[na:1.8.0_201]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.fillBuffer(AbstractSessionInputBuffer.java:161) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.io.SocketInputBuffer.fillBuffer(SocketInputBuffer.java:82) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.io.AbstractSessionInputBuffer.readLine(AbstractSessionInputBuffer.java:276) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:138) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead(DefaultHttpResponseParser.java:56) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.io.AbstractMessageParser.parse(AbstractMessageParser.java:259) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.AbstractHttpClientConnection.receiveResponseHeader(AbstractHttpClientConnection.java:294) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.conn.DefaultClientConnection.receiveResponseHeader(DefaultClientConnection.java:257) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.conn.AbstractClientConnAdapter.receiveResponseHeader(AbstractClientConnAdapter.java:230) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse(HttpRequestExecutor.java:273) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.protocol.HttpRequestExecutor.execute(HttpRequestExecutor.java:125) ~[httpcore-4.4.12.jar:4.4.12]
+	at org.apache.http.impl.client.DefaultRequestDirector.tryExecute(DefaultRequestDirector.java:679) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:481) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:835) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:118) ~[httpclient-4.5.10.jar:4.5.10]
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56) ~[httpclient-4.5.10.jar:4.5.10]
+	at com.sun.jersey.client.apache4.ApacheHttpClient4Handler.handle(ApacheHttpClient4Handler.java:173) ~[jersey-apache-client4-1.19.1.jar:1.19.1]
+	... 27 common frames omitted
+
+2020-05-03 13:13:22.624  WARN 2100 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution failed with message: java.net.SocketTimeoutException: Read timed out
+2020-05-03 13:13:23.546  INFO 2100 --- [DiscoveryClient-HeartbeatExecutor-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution succeeded on retry #1
+2020-05-03 13:13:23.547  INFO 2100 --- [DiscoveryClient-InstanceInfoReplicator-0] c.n.d.s.t.d.RetryableEurekaHttpClient    : Request execution succeeded on retry #1
+2020-05-03 13:13:23.916  INFO 2100 --- [DiscoveryClient-HeartbeatExecutor-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084 - registration status: 204
+2020-05-03 13:13:23.916  INFO 2100 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084 - registration status: 204
+2020-05-03 13:14:19.785  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:19:19.795  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:24:19.834  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:29:19.881  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:34:19.941  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:39:19.993  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:44:19.998  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:49:20.084  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:54:20.124  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 13:59:20.162  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 14:04:21.672  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 14:09:23.269  INFO 2100 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 14:35:13.277  INFO 7596 --- [restartedMain] c.t.i.employee.EmployeeApplication       : No active profile set, falling back to default profiles: default
+2020-05-03 14:35:17.064  INFO 7596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-05-03 14:35:17.445  INFO 7596 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 314ms. Found 2 JPA repository interfaces.
+2020-05-03 14:35:18.731  INFO 7596 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=01a2024f-a178-3d0c-9754-6c7a0b58ff07
+2020-05-03 14:35:19.126  INFO 7596 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-05-03 14:35:21.100  INFO 7596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8084 (http)
+2020-05-03 14:35:21.210  INFO 7596 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-05-03 14:35:21.212  INFO 7596 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-05-03 14:35:21.890  INFO 7596 --- [restartedMain] o.a.c.c.C.[.[.[/employeeservice]         : Initializing Spring embedded WebApplicationContext
+2020-05-03 14:35:21.891  INFO 7596 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 8529 ms
+2020-05-03 14:35:22.904  INFO 7596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-05-03 14:35:26.566  INFO 7596 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-05-03 14:35:27.029  INFO 7596 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-05-03 14:35:27.628  INFO 7596 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate Core {5.4.9.Final}
+2020-05-03 14:35:28.516  INFO 7596 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2020-05-03 14:35:29.100  INFO 7596 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+2020-05-03 14:35:31.659  INFO 7596 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-05-03 14:35:31.694  INFO 7596 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-05-03 14:35:34.461  WARN 7596 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 14:35:34.461  INFO 7596 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 14:35:34.472  WARN 7596 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : No URLs will be polled as dynamic configuration sources.
+2020-05-03 14:35:34.472  INFO 7596 --- [restartedMain] c.n.c.sources.URLConfigurationSource     : To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2020-05-03 14:35:34.672  WARN 7596 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-05-03 14:35:35.265  INFO 7596 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-05-03 14:35:36.250  INFO 7596 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-05-03 14:35:37.998  WARN 7596 --- [restartedMain] ockingLoadBalancerClientRibbonWarnLogger : You already have RibbonLoadBalancerClient on your classpath. It will be used by default. As Spring Cloud Ribbon is in maintenance mode. We recommend switching to BlockingLoadBalancerClient instead. In order to use it, set the value of `spring.cloud.loadbalancer.ribbon.enabled` to `false` or remove spring-cloud-starter-netflix-ribbon from your project.
+2020-05-03 14:35:38.362  INFO 7596 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2020-05-03 14:35:38.691  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2020-05-03 14:35:40.001  INFO 7596 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2020-05-03 14:35:40.002  INFO 7596 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2020-05-03 14:35:41.275  INFO 7596 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2020-05-03 14:35:41.276  INFO 7596 --- [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2020-05-03 14:35:41.907  INFO 7596 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 14:35:42.382  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 14:35:42.382  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 14:35:42.383  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 14:35:42.383  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 14:35:42.384  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 14:35:42.384  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2020-05-03 14:35:42.385  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 14:35:43.621  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 14:35:43.627  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2020-05-03 14:35:43.634  INFO 7596 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2020-05-03 14:35:43.661  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1588496743643 with initial instances count: 0
+2020-05-03 14:35:43.671  INFO 7596 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application EMPLOYEE-SERVICE with eureka with status UP
+2020-05-03 14:35:43.677  INFO 7596 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1588496743677, current=UP, previous=STARTING]
+2020-05-03 14:35:43.692  INFO 7596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084: registering service...
+2020-05-03 14:35:47.309  INFO 7596 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8084 (http) with context path '/employeeservice'
+2020-05-03 14:35:47.314  INFO 7596 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8084
+2020-05-03 14:35:47.640  INFO 7596 --- [restartedMain] c.t.i.employee.EmployeeApplication       : Started EmployeeApplication in 39.658 seconds (JVM running for 42.162)
+2020-05-03 14:35:48.669  INFO 7596 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_EMPLOYEE-SERVICE/DESKTOP-BVECKK9:employee-service:8084 - registration status: 204
+2020-05-03 14:36:13.630  INFO 7596 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2020-05-03 14:36:13.632  INFO 7596 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2020-05-03 14:36:13.633  INFO 7596 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2020-05-03 14:36:13.633  INFO 7596 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2020-05-03 14:36:13.634  INFO 7596 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2020-05-03 14:36:13.635  INFO 7596 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2020-05-03 14:36:13.636  INFO 7596 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2020-05-03 14:36:13.816  INFO 7596 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2020-05-03 14:40:43.064  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 14:45:43.383  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 14:50:43.460  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 14:55:44.616  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:00:46.030  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:05:46.079  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:10:46.267  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:14:12.639  INFO 7596 --- [http-nio-8084-exec-3] o.a.c.c.C.[.[.[/employeeservice]         : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-05-03 15:14:12.709  INFO 7596 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-05-03 15:14:19.791  INFO 7596 --- [http-nio-8084-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7081 ms
+2020-05-03 15:14:29.530  INFO 7596 --- [http-nio-8084-exec-2] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> getCount
+2020-05-03 15:14:29.530  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:14:29.531  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:14:29.597  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:14:29.597  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:14:32.336  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:14:32.336  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:14:32.337  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:14:34.569  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller -> CreateEmployee
+2020-05-03 15:14:34.570  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get By Id 
+2020-05-03 15:14:34.571  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:-->Get By Employee ID Methods
+2020-05-03 15:14:59.405  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  : New Employee Successfully saved
+2020-05-03 15:14:59.405  INFO 7596 --- [http-nio-8084-exec-4] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee DTO To Employee Entity Converte 
+2020-05-03 15:14:59.725  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Save Employee Details methods
+2020-05-03 15:15:06.576  INFO 7596 --- [http-nio-8084-exec-1] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:15:06.576  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:15:06.576  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:15:11.746  WARN 7596 --- [http-nio-8084-exec-4] o.h.a.i.UnresolvedEntityInsertActions    : HHH000437: Attempting to save one or more entities that have a non-nullable association with an unsaved transient entity. The unsaved transient entity must be saved in an operation prior to saving these dependent entities.
+	Unsaved transient entity: ([com.training.internal.employee.entities.Designation#<null>])
+	Dependent entities: ([[com.training.internal.employee.entities.Employee#<null>]])
+	Non-nullable association(s): ([com.training.internal.employee.entities.Employee.designation])
+2020-05-03 15:15:14.310 ERROR 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Errororg.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.training.internal.employee.entities.Employee.designation -> com.training.internal.employee.entities.Designation; nested exception is java.lang.IllegalStateException: org.hibernate.TransientPropertyValueException: Not-null property references a transient value - transient instance must be saved before current operation : com.training.internal.employee.entities.Employee.designation -> com.training.internal.employee.entities.Designation
+2020-05-03 15:15:47.933  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:17:11.826  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> New Designation Created succesfully
+2020-05-03 15:17:11.900  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.employee.dto.DesignationConverter  : Designation Converter-->DTO To Entity Converter
+2020-05-03 15:17:11.901  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  : succesfully saved Designation
+2020-05-03 15:20:48.321  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:24:41.363  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> getCount
+2020-05-03 15:24:41.363  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:24:41.401  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:24:41.839  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:24:41.843  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:24:41.871  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:24:43.863  INFO 7596 --- [http-nio-8084-exec-3] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:24:47.176  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:24:47.573  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:24:47.574  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:24:47.735  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:25:25.460  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller -> CreateEmployee
+2020-05-03 15:25:25.463  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get By Id 
+2020-05-03 15:25:25.464  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:-->Get By Employee ID Methods
+2020-05-03 15:25:25.608  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  : New Employee Successfully saved
+2020-05-03 15:25:25.609  INFO 7596 --- [http-nio-8084-exec-1] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee DTO To Employee Entity Converte 
+2020-05-03 15:25:25.610  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Save Employee Details methods
+2020-05-03 15:25:32.203  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> getCount
+2020-05-03 15:25:32.229  INFO 7596 --- [http-nio-8084-exec-2] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:25:32.230  INFO 7596 --- [http-nio-8084-exec-2] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:25:32.230  INFO 7596 --- [http-nio-8084-exec-2] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:25:32.263  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:25:32.263  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:25:33.811  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:25:33.850  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:25:33.850  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:25:33.885  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:25:35.665  INFO 7596 --- [http-nio-8084-exec-2] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:25:35.992  INFO 7596 --- [http-nio-8084-exec-2] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:25:52.894  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:26:21.171  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller -> CreateEmployee
+2020-05-03 15:26:21.171  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get By Id 
+2020-05-03 15:26:21.171  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:-->Get By Employee ID Methods
+2020-05-03 15:26:21.174  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.repositories.EmployeeRepository  : New Employee Successfully saved
+2020-05-03 15:26:21.174  INFO 7596 --- [http-nio-8084-exec-10] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee DTO To Employee Entity Converte 
+2020-05-03 15:26:21.175  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Save Employee Details methods
+2020-05-03 15:26:24.624  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> getCount
+2020-05-03 15:26:24.628  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:26:24.628  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:26:24.628  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:26:24.683  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:26:24.683  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:26:24.717  INFO 7596 --- [http-nio-8084-exec-5] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:26:24.717  INFO 7596 --- [http-nio-8084-exec-5] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:26:24.717  INFO 7596 --- [http-nio-8084-exec-5] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:26:24.731  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:26:24.733  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:26:24.733  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:26:24.803  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:26:33.243  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> GetEmployeeById
+2020-05-03 15:26:33.244  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get By Id 
+2020-05-03 15:26:33.244  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:-->Get By Employee ID Methods
+2020-05-03 15:26:34.431  INFO 7596 --- [http-nio-8084-exec-8] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter-->Employee to DTO Converter
+2020-05-03 15:26:54.701  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> Update
+2020-05-03 15:26:54.908  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  : Employee is Updated
+2020-05-03 15:26:54.927  INFO 7596 --- [http-nio-8084-exec-1] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee DTO To Employee Entity Converte 
+2020-05-03 15:26:54.927  INFO 7596 --- [http-nio-8084-exec-1] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee DTO To Employee Entity Converte 
+2020-05-03 15:26:54.951  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.repositories.EmployeeRepository  : Employee updates Successfully
+2020-05-03 15:26:56.426  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:26:56.427  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:26:56.429  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:26:56.471  INFO 7596 --- [http-nio-8084-exec-5] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:26:56.472  INFO 7596 --- [http-nio-8084-exec-5] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:26:56.472  INFO 7596 --- [http-nio-8084-exec-5] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:27:38.963  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> DeleteEmployeeById
+2020-05-03 15:27:38.964  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.e.repositories.EmployeeRepository  :  successfully deleted 
+2020-05-03 15:27:38.965  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.e.repositories.EmployeeRepository  : Delete Employee Details Methods
+2020-05-03 15:30:30.989  INFO 7596 --- [http-nio-8084-exec-6] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:30:31.003  INFO 7596 --- [http-nio-8084-exec-6] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:30:31.003  INFO 7596 --- [http-nio-8084-exec-6] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:30:31.023  INFO 7596 --- [http-nio-8084-exec-6] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:30:31.023  INFO 7596 --- [http-nio-8084-exec-6] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:30:31.232  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:30:31.233  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:30:31.233  INFO 7596 --- [http-nio-8084-exec-8] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:30:31.240  INFO 7596 --- [http-nio-8084-exec-8] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:30:31.240  INFO 7596 --- [http-nio-8084-exec-8] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:30:31.285  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:30:31.285  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:30:31.285  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:30:31.296  INFO 7596 --- [http-nio-8084-exec-7] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:30:31.296  INFO 7596 --- [http-nio-8084-exec-7] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:30:52.903  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:31:02.266  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> getCount
+2020-05-03 15:31:02.266  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:31:02.266  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:31:02.267  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:31:02.326  INFO 7596 --- [http-nio-8084-exec-10] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:31:02.326  INFO 7596 --- [http-nio-8084-exec-10] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:31:02.348  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:31:02.348  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:31:02.354  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:31:02.365  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:31:02.365  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:31:02.372  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:31:43.530  INFO 7596 --- [http-nio-8084-exec-6] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller -> CreateEmployee
+2020-05-03 15:31:43.532  INFO 7596 --- [http-nio-8084-exec-6] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get By Id 
+2020-05-03 15:31:43.533  INFO 7596 --- [http-nio-8084-exec-6] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:-->Get By Employee ID Methods
+2020-05-03 15:31:43.535  INFO 7596 --- [http-nio-8084-exec-6] c.t.i.e.repositories.EmployeeRepository  : New Employee Successfully saved
+2020-05-03 15:31:43.535  INFO 7596 --- [http-nio-8084-exec-6] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee DTO To Employee Entity Converte 
+2020-05-03 15:31:43.535  INFO 7596 --- [http-nio-8084-exec-6] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Save Employee Details methods
+2020-05-03 15:31:46.794  INFO 7596 --- [http-nio-8084-exec-1] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller :-> getCount
+2020-05-03 15:31:46.846  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:31:46.847  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:31:46.847  INFO 7596 --- [http-nio-8084-exec-7] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:31:46.854  INFO 7596 --- [http-nio-8084-exec-7] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:31:46.854  INFO 7596 --- [http-nio-8084-exec-7] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:31:46.854  INFO 7596 --- [http-nio-8084-exec-7] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:31:46.881  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:31:46.896  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:31:46.917  INFO 7596 --- [http-nio-8084-exec-10] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:31:46.929  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.s.impl.DesignationServiceImpl    : Designation Controller -> GetDesignation
+2020-05-03 15:31:46.929  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.e.repositories.EmployeeRepository  : Successfully Get Designation Details
+2020-05-03 15:31:46.935  INFO 7596 --- [http-nio-8084-exec-5] c.t.i.employee.dto.DesignationConverter  :  Designation Converter-->Designation to DTO Converte
+2020-05-03 15:31:52.571  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:31:52.571  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:31:52.574  INFO 7596 --- [http-nio-8084-exec-4] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:31:52.591  INFO 7596 --- [http-nio-8084-exec-4] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:31:52.591  INFO 7596 --- [http-nio-8084-exec-4] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:31:52.591  INFO 7596 --- [http-nio-8084-exec-4] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:31:52.919  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:31:52.920  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:31:52.920  INFO 7596 --- [http-nio-8084-exec-9] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:31:52.942  INFO 7596 --- [http-nio-8084-exec-9] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:31:52.942  INFO 7596 --- [http-nio-8084-exec-9] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:31:52.942  INFO 7596 --- [http-nio-8084-exec-9] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:31:53.589  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.s.impl.EmployeeServiceImpl       : Employee Controller : --> GetAllEmployeeInfo
+2020-05-03 15:31:53.593  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.repositories.EmployeeRepository  :  Employee Successfully Get All Employee Details 
+2020-05-03 15:31:53.595  INFO 7596 --- [http-nio-8084-exec-3] c.t.i.e.repositories.EmployeeRepository  : Employee Service Imp:--> Get All Employee Details Methods
+2020-05-03 15:31:53.625  INFO 7596 --- [http-nio-8084-exec-3] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee to DTO Converter
+2020-05-03 15:31:53.626  INFO 7596 --- [http-nio-8084-exec-3] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:31:53.638  INFO 7596 --- [http-nio-8084-exec-3] c.t.internal.employee.dto.EmployeeDTO    : Employee Converter---> Employee List Converte
+2020-05-03 15:35:52.918  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:40:52.969  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:45:52.981  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:50:53.025  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 15:55:53.094  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:00:53.109  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:05:53.112  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:10:53.128  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:15:53.138  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:20:53.148  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:25:53.158  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:30:53.208  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:35:53.285  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:40:53.337  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:45:53.387  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:50:53.407  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 16:55:53.513  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:00:53.928  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:05:53.963  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:10:54.021  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:15:54.026  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:20:54.066  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:25:54.086  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:30:54.088  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:35:54.106  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:40:54.251  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:45:54.654  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:50:54.699  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 17:55:54.759  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:00:55.860  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:05:56.477  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:10:56.488  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:15:56.491  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:20:56.496  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:25:56.502  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:30:56.518  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:35:56.542  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:40:56.587  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:45:56.596  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:50:56.602  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 18:55:56.656  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:00:56.659  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:05:56.663  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:10:56.666  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:15:56.676  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:20:56.682  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:25:56.688  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:30:56.692  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:35:56.695  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:40:56.754  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:45:56.757  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:50:56.761  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 19:55:56.765  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:00:56.767  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:05:56.770  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:10:56.772  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:15:56.778  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:20:56.781  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:25:56.784  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:30:56.797  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:35:56.799  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:40:56.812  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:45:56.818  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:50:56.820  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 20:55:56.823  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:00:56.830  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:05:56.848  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:10:56.979  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:12:21.698  WARN 7596 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m9s656ms831µs800ns).
+2020-05-03 21:15:57.203  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:20:57.205  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:25:57.208  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:30:57.213  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:35:57.268  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:40:57.284  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:45:57.350  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:50:57.352  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 21:55:57.354  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 22:00:57.357  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 22:05:57.359  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 22:10:57.362  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 22:15:57.372  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 22:20:57.567  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2020-05-03 22:25:58.856  INFO 7596 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

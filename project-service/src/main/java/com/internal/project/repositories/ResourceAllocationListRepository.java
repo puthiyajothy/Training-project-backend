@@ -1,14 +1,9 @@
-package com.internal.project.repositories;
-//package com.sgic.internal.defecttracker.project.repositories;
-//
+//package com.internal.project.repositories;
 //
 //import org.springframework.data.jpa.repository.JpaRepository;
 //
+//import com.internal.project.entities.ResourceAllocationList;
 //
-//import com.sgic.internal.defecttracker.project.entities.ResourceAllocationList;
+//public interface ResourceAllocationListRepository extends JpaRepository<ResourceAllocationList, Long> {
 //
-//public interface ResourceAllocationListRepository extends JpaRepository<ResourceAllocationList, Long>{
-//
-//	
-//	 
 //}

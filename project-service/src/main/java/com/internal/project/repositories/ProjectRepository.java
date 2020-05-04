@@ -10,7 +10,7 @@ import com.internal.project.entities.Project;
 
 public interface ProjectRepository  extends JpaRepository<Project, Long> {
 	
-	Project getByprojectId(Long projectId);
+	Project getByprojectId(Long projectid);
 
 	// Find Project By Project_Name Method
 	@Query(value = "FROM Project WHERE project_name= :projectName")
@@ -34,13 +34,13 @@ public interface ProjectRepository  extends JpaRepository<Project, Long> {
 	
 	public long count();
 	
-	@Query("SELECT open FROM status")
-	int openproject();
-	
-	@Query("SELECT closed FROM status")
-	int closedproject();
-	
-	@Query("SELECT start FROM status")
-	int startproject();
+//	@Query("SELECT open FROM status")
+//	int openproject();
+//	
+//	@Query("SELECT closed FROM status")
+//	int closedproject();
+//	
+//	@Query("SELECT start FROM status")
+//	int startproject();
 	
 }
